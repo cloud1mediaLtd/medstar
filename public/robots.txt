@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://anasmahmud.com/sitemap-index.xml

@@ -1,0 +1,54 @@
+---
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+import Strafield from "./strafield.astro";
+
+const remoteimage = "https://res.cloudinary.com/cloud1media-com/image/upload/v1676526818/hero_dbutyg.png";
+---
+
+<main
+  class=" bg-black relative py-32">
+  <Strafield />
+
+  <div class="flex items-center relative flex-col ">
+
+      <h1
+        class="text-center md:text-start text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter text-white">
+        Websites Done Right...
+      </h1>
+      <h2
+        class="mt-5 text-center md:text-start text-xl lg:text-2xl xl:text-2xl font-bold lg:tracking-tight xl:tracking-tighter text-white">
+        Manchester Based Freelance Webdesigner
+      </h2>
+    
+      <p class="text-sm mt-4 text-slate-400 max-w-xl text-center">
+        Dedicated to helping bring your vision to life, providing you with the resources and expertise necessary.
+      </p>
+
+
+    <div class="justify-center md:justify-start flex flex-col sm:flex-row gap-3 mt-5">
+      <div class="flex sm:flex-row gap-3">
+        <Link
+          href="#"
+          href="/contact"
+          target="_blank"
+          class="flex gap-1 items-center justify-center"
+          rel="noopener">
+          <Icon class="text-white w-5 h-5" name="clarity:talk-bubbles-solid" />
+          Lets build
+        </Link>
+        <Link
+          size="lg"
+          style="outline"
+          rel="noopener"
+          href="https://github.com/cloud1mediaLtd"
+          class="flex gap-1 items-center justify-center"
+          target="_blank">
+          <Icon class="text-black w-4 h-4" name="zondicons:portfolio" />
+          Portfolio
+        </Link>
+      </div>
+  </div>
+  </div>
+
+</main>

@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+
+const publishedservicesEntries = await getCollection("services", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedservicesEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+
+
+
+
+---
+<div class="">
+  <div class=" mt-16 md:mt-16">
+    <div class="flex justify-center">
+      <h2 class="text-center lg:text-start text-3xl lg:text-4xl font-bold lg:tracking-tight">
+        Here to build great experiences
+    </h2>
+  </div>
+    <p class=" text-center text-lg mt-4 text-slate-600">
+      ________
+    </p>
+  </div>
+</div>
+
+<main class="mt-16">
+  <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-16 mx-auto">
+    {
+      publishedservicesEntries.map((serviceEntry, index) => (
+        <div class="group">
+            <div class="items-center">
+              <Picture
+                src={serviceEntry.data.image.src}
+                alt={serviceEntry.data.image.alt}
+                sizes="(max-width: 800px) 100vw, 800px"
+                widths={[200, 400, 800]}
+                aspectRatio="16:9"
+                background="#ffffff"
+                fit="cover"
+                position="center"
+                loading={index <= 2 ? "eager" : "lazy"}
+                decoding={index <= 2 ? "sync" : "async"}
+                class="w-full rounded-md px-8 md:px-0"
+              />
+              <div>
+                <div class="flex h-16 align-middle items-center justify-center my-4">
+                  <h2 class="font-semibold text-lg leading-snug tracking-tight  text-center">
+                    {serviceEntry.data.title}
+                  </h2>
+                </div>
+
+                <p class="text-slate-600 mt-2 text-center text-sm">
+                  {serviceEntry.data.snippet}
+                </p>
+              </div>
+            </div>
+        </div>
+      ))
+    }
+  </ul>
+</main>

@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+import Link from "@components/ui/link.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contact</Fragment>
+      <Fragment slot="desc">Here to help</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Contact Information</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Fill up the form or send an
+          email or give us a call.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>17 Albert Road, Levenshulme - Manchester</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:hello@astroshipstarter.com"
+              >me@anasmahmud.co.uk</a
+            >
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+447459236999">+44 7459 236 999</a
+            >
+          </div>
+          <div class="mt-3 p-2 bg-slate-100 rounded">
+            <div class="flex items-center">
+              <Icon class="w-4 h-4" name="uil:comment-info"/>
+              <span class="ml-2 font-semibold">Did you know</span>
+            </div>
+            <p class="text-sm leading-relaxed text-slate-500 mt-3 mb-2">
+              This contact form is conected to a CRM system (Customer Relationship Manager)
+              that will automatically respond with a welcome Email, add you to my pipeline with a task
+              to respond appropriatly according to the enquiry with an email, call or set up a meeting. 
+            </p>
+            <a class="text-sm font-semibold hover:underline" href="#">An article on Why you should set one up too &gt;</a>
+        </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>
+

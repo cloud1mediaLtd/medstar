@@ -1,0 +1,79 @@
+---
+import Container from "@components/container.astro";
+import Link from "@components/ui/link.astro";
+import Dropdown from "./dropdown.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const menuitems = [
+  
+{
+    title: "Services",
+    path: "/services",
+    target: ""
+    
+  },
+
+  {
+    title: "Use Cases",
+    path: "/portfolio",
+    target: ""
+  },
+
+  
+];
+---
+
+<div class="bg-red-800">
+  <header class="flex flex-col lg:flex-row justify-between items-center py-5 max-w-screen-xl mx-auto">
+    <Astronav>
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-xl">
+          <img src="..//fa2b3c00-2423-4c15-be39-4d4beda7092d.webp" alt="Girl in a jacket" width="280" height=""/>
+        </a>
+        <div class="block lg:hidden">
+          <MenuIcon class="w-4 h-4 text-gray-800" />
+        </div>
+      </div>
+      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+        <ul class="flex flex-col lg:flex-row lg:gap-3">
+          {
+            menuitems.map((item, index) => (
+              <>
+                {item.children && (
+                  <Dropdown
+                    title={item.title}
+                    path={item.path}
+                    target={item.target}
+                    children={item.children}
+                    lastItem={index === menuitems.length - 1}
+                  />
+                )}
+
+                {!item.children && (
+                  <li>
+                    <a
+                      href={item.path}
+                      target={item.target}
+                      class="flex lg:px-3 py-2 text-white hover:text-gray-200">
+                      {item.title}
+                    </a>
+                  </li>
+                )}
+              </>
+            ))
+          }
+        </ul>
+        <div class="lg:hidden flex items-center mt-3 gap-4">
+          <Link href="#" style="muted" block size="md">Log in</Link>
+          <Link href="/contact" size="md" block>Lets Talk</Link>
+        </div>
+      </MenuItems>
+    </Astronav>
+    <div>
+      <div class="hidden lg:flex items-center gap-4">
+        <a class="font-bold" href="tel:07459236999" >07459 236 999</a>
+        <Link href="/contact" size="md">Lets Talk</Link>
+      </div>
+    </div>
+  </header>
+</div>
