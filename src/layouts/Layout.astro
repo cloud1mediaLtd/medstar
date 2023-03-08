@@ -26,8 +26,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Anas Mahmud"
-  : "Anas Mahmud - Manchester Freelance Web designer";
+  ? title + " | " + "Medastra"
+  : "Medastra - Become a star Doctor";
 ---
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Anas Mahmud - Manchester Freelance Web designer."
+      description="Medastra - Become a star Doctor"
       canonical={canonicalURL}
       twitter={{
         creator: "@anasmahmud",
@@ -52,7 +52,7 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Anas Mahmud - Web Design done right`,
+          title: `Medastra - Become a star Doctor`,
           image: resolvedImageWithDomain,
         },
         image: {

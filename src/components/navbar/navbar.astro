@@ -7,15 +7,25 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 const menuitems = [
   
 {
-    title: "Services",
-    path: "/services",
+    title: "About us",
+    path: "/about",
+    target: ""
+  },
+  {
+    title: "Courses",
+    path: "/courses",
+    target: ""
+  },
+  {
+    title: "Team",
+    path: "/team",
     target: ""
     
   },
 
   {
-    title: "Use Cases",
-    path: "/portfolio",
+    title: "Accommodation",
+    path: "/accommodation",
     target: ""
   },
 
@@ -24,11 +34,11 @@ const menuitems = [
 ---
 
 <div class="bg-red-800">
-  <header class="flex flex-col lg:flex-row justify-between items-center py-5 max-w-screen-xl mx-auto">
+  <header class="flex flex-col lg:flex-row justify-between items-center py-4 max-w-screen-xl mx-auto">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-xl">
-          <img src="..//fa2b3c00-2423-4c15-be39-4d4beda7092d.webp" alt="Girl in a jacket" width="280" height=""/>
+          <img src="..//fa2b3c00-2423-4c15-be39-4d4beda7092d.webp" alt="" width="250" height=""/>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -71,8 +81,8 @@ const menuitems = [
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a class="font-bold" href="tel:07459236999" >07459 236 999</a>
-        <Link href="/contact" size="md">Lets Talk</Link>
+        <a class="font-bold text-white" href="tel:07865 127757" >07865 127757</a>
+        <Link href="/contact" size="md" style="inverted">Lets Talk</Link>
       </div>
     </div>
   </header>

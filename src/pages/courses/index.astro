@@ -1,0 +1,65 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const publishedcoursesEntries = await getCollection("courses");
+
+// Sort content entries by publication date
+publishedcoursesEntries.sort(function(a, b){return b.data.order - a.data.order});
+
+
+---
+
+<Layout title="courses">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Explore our courses</Fragment>
+      <Fragment slot="desc">
+        Welcome to our courses, take your time and have read and see if you come
+        across something that your intrested in.
+      </Fragment>
+    </Sectionhead>
+
+    <main class="mt-16">
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-16 mx-auto">
+            {
+              publishedcoursesEntries.map((courseEntry, index) => (
+                <div class="group">
+                    <a href={`/courses/${courseEntry.slug}`}>
+                    <div class="items-center">
+                      <Picture
+                        src={courseEntry.data.image.src}
+                        alt={courseEntry.data.image.alt}
+                        sizes="(max-width: 800px) 100vw, 800px"
+                        widths={[200, 400, 800]}
+                        aspectRatio="16:9"
+                        background="#ffffff"
+                        fit="cover"
+                        position="center"
+                        loading={index <= 2 ? "eager" : "lazy"}
+                        decoding={index <= 2 ? "sync" : "async"}
+                        class="w-full rounded-md"
+                      />
+                      <div>
+                        <div class="flex h-16 align-middle items-center justify-center my-4">
+                          <h2 class="font-semibold text-lg leading-snug tracking-tight  text-center">
+                            {courseEntry.data.title}
+                          </h2>
+                        </div>
+    
+                        <p class="text-slate-600 mt-2 text-center text-sm">
+                          {courseEntry.data.snippet}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              ))
+            }
+          </ul>
+    </main>
+  </Container>
+</Layout>

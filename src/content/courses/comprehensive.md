@@ -1,0 +1,27 @@
+---
+draft: false
+title: "Comprehensive"
+category: "Plab 2"
+price: "£595"
+snippet: "This is our most detailed course, providing everything you need to sail through the PLAB 2 exam."
+image: {
+    src: "https://static.wixstatic.com/media/77f5caab3f7d42d0ba0e174c88d9eac7.jpg/v1/fill/w_870,h_576,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Doctor%20and%20Patient.jpg",
+    alt: "full stack web development"
+}
+order: 3
+icon: "carbon:application-web"
+year: "2023"
+dates: [02/03/23 to 13/03/23, 27/04/23 to 08/05/23, 08/06/23 to 19/06/23, 13/07/23 to 24/07/23, 23/08/23 to 03/09/23, 28/09/23 to 09/10/23, 02/11/23 to 13/11/23, 23/11/23 to 04/12/23]
+---
+
+This is our most detailed course, providing everything you need to sail through the PLAB 2 exam.
+
+
+This course includes:
+
+- 12 days of interactive teaching, covering all the topics that you can encounter in the PLAB 2 exam (see course details)
+- PLAB examiner talk providing tips on how to ace the exam
+- free guidebook compiled especially for the course
+- extended access to practice on the manikins
+- Structured Practice Sessions (SPS). This UNIQUE feature provided only by our course will give you plenty of additional opportunity to practice formally, and will maximise your chances of success in the PLAB 2 exam. Total 8 days of SPS offered.
+- Two mock exams with personalised feedback by senior and experienced doctors including PLAB examiners.

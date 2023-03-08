@@ -1,34 +1,41 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
-import {featureswebdesign} from "@utils/featurelist.ts";
 
+const aboutfeature = [
+  {
+    icon: "simple-icons:handshake",
+    title: "Supervised & Structured Sessions",
+    snippet: "Boost your knowledge, experience, consultation skills and confidence",
+
+},
+{
+    icon: "simple-icons:apachespark",
+    title: "Senior & Experienced Faculty",
+    snippet: "All trainers are currently practicing in the UK at a senior level",
+
+},
+{
+    icon: "map:compass",
+    title: "Great Location in Manchester",
+    snippet: "Ideally situated on the world-famous ‘Curry Mile’ in Manchester",
+
+},
+]
 
 ---
-<div class="">
-  <div class=" mt-16 md:mt-0">
-    <div class="flex justify-center">
-      <h2 class="text-center lg:text-start text-4xl lg:text-5xl font-bold lg:tracking-tight">
-      The Help you need
-    </h2>
-  </div>
-    <p class=" text-center text-lg mt-4 text-slate-600">
-      ___
-    </p>
-  </div>
-</div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-10 md:gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-3 -mt-12 gap-4 md:gap-8 bg-white relative rounded-md p-4 shadow-md z-20">
   {
-    featureswebdesign.map((item) => (
+    aboutfeature.map((item) => (
       
-          <div class="flex gap-4 items-start">
-            <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <div class="flex gap-4 items-center">
+            <div class="flex mt-1 bg-red-800 rounded-full p-3 w-14 h-14 shrink-0">
               <Icon class="text-white" name={item.icon} />
             </div>
             <div>
-              <a href={item.path}><h3 class="font-semibold text-lg">{item.title}</h3></a>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              <a href={}><h3 class="font-bold text-md">{item.title}</h3></a>
+              <p class="text-slate-500 mt-0 leading-tight text-sm font-semibold">{item.snippet}</p>
             </div>
           </div>
      

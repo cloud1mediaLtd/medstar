@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+import Link from "@components/ui/link.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About Us</Fragment>
+      <Fragment slot="desc">A little more about us</Fragment>
+    </Sectionhead>
+
+    <main>
+        <div class="my-8">
+            <div class="my-8">
+                <h2 class="font-semibold mb-4">MEDASTRA is here for you</h2>
+                <p>
+                    Are you worried about passing your PLAB exam?<br>
+                    Confused about which course provider to join?<br>
+                    Not sure where to stay in Manchester?<br>
+                    Wondering how to get a good job in the UK?<br>
+                    <br>
+                    If you are asking yourself these questions, you have come to the right place.
+                    At MEDASTRA, we completely understand how stressed you might be feeling as you plan your journey to becoming a successful doctor in the UK.
+                    We are here to guide you through each part of the process, from the time you arrive in the UK, through your PLAB 2 preparation, to your first job in the NHS.
+                </p>
+            </div>
+
+            <div class="my-8">
+                <h2 class="font-semibold mb-4">Who we are</h2>
+                <p>
+                    <ul class="list-disc">
+                        <li>Senior and experienced GPs and Hospital doctors experienced in training junior doctors</li>
+                        <li>PLAB examiners</li>
+                        <li>NHS Consultants and Clinical Directors</li>
+                        <li>We have first-hand experience of going through this journey ourselves and fully understand the challenges involved.</li>
+                    </ul>
+                    <br>
+
+                    You will also benefit from our faculty’s experience as PLAB examiners for the GMC, as they will give you valuable tips that you need to ace the PLAB2 exam.<br>
+
+                    We pride ourselves on our integrity and ethical approach, both professionally and personally. We echo this sentiment throughout our course provision.<br>
+
+                    We have excellent role players for our mock exams to give you the same experience as you will have with the simulators in the real exam.
+                </p>
+            </div>
+
+            <div class="my-8">
+                <h2 class="font-bold mb-4">What we offer</h2>
+                <p>
+                    We do not just provide PLAB2 courses; our support extends well beyond this.<br>
+                    <ul class="list-disc">
+                        <li>excellent accommodation in the heart of Manchester close to the course and GMC</li>
+                        <li>comprehensive PLAB 2 preparation through our carefully tailored courses</li>
+                        <li>additional opportunity to practice through our structured and supervised practice sessions</li>
+                        <li>CV writing and interview preparation courses</li>
+                        <li>clinical skills assessment course</li>
+                        <li>NHS orientation and life in the UK sessions</li>
+                        <li>help with arranging your clinical attachments and first job</li>
+                        <li>help with your visa and immigration matters through our legal contacts</li>
+                    </ul>
+                 </p>
+            </div>
+            
+        </div>
+    </main>
+  </Container>
+</Layout>
+

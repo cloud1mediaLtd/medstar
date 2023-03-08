@@ -7,7 +7,7 @@ avatar: {
     alt: "Dr. Sara Awan"
 }
 
-qualification: [MBBS, MSc (UK), MRCGP (UK), DFSRH (UK), PGDipClinDerm (QMU London), PGCert AesthMed (QMU London)]
+qualification: [MBBS, MSc (UK),MRCGP (UK),DFSRH (UK),PGDipClinDerm (QMU London),PGCert AesthMed (QMU London)]
 awards: []
 
 ---
