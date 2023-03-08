@@ -75,6 +75,29 @@ declare module 'astro:content' {
   data: any
 },
 },
+"beyond": {
+"assesment.md": {
+  id: "assesment.md",
+  slug: "assesment",
+  body: string,
+  collection: "beyond",
+  data: InferEntrySchema<"beyond">
+},
+"cv.md": {
+  id: "cv.md",
+  slug: "cv",
+  body: string,
+  collection: "beyond",
+  data: InferEntrySchema<"beyond">
+},
+"cvchecki.md": {
+  id: "cvchecki.md",
+  slug: "cvchecki",
+  body: string,
+  collection: "beyond",
+  data: InferEntrySchema<"beyond">
+},
+},
 "blog": {
 "complete-guide-fullstack-development.md": {
   id: "complete-guide-fullstack-development.md",

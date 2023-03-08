@@ -2,7 +2,7 @@
 import { Picture } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
 
-const publishedcoursesEntries = await getCollection("courses");
+const publishedcoursesEntries = await getCollection("beyond");
 
 // Sort content entries by publication date
 publishedcoursesEntries.sort(function(a, b){return b.data.order - a.data.order});
@@ -14,7 +14,7 @@ publishedcoursesEntries.sort(function(a, b){return b.data.order - a.data.order})
   <div class=" mt-16 md:mt-16">
     <div class="flex justify-center">
       <h2 class="text-center lg:text-start text-2xl lg:text-2xl font-bold lg:tracking-tight">
-        Plab 2 Courses
+        Beyond Plab
     </h2>
   </div>
     <p class=" text-center text-lg mt-4 text-slate-600">
