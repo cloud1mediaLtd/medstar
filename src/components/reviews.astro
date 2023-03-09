@@ -1,40 +1,49 @@
 ---
+import { Icon } from "astro-icon";
+
 const review = [
   {
-    name: "Tracy Wardle",
-    text: "the fitrst review",
-    url: "www.thebeautycode.co.uk",
+    name: "Dr Arsalan Naqvi",
+    text: "Really thankful to Dr Sara Awan & Dr Tauqeer Abbas, Both extremely professional in teaching & guiding towards the right direction. Helping me underst& ways to get through different challenging questions. Dr Abbas has great experience being former Plab 2 examiner giving me great tips regarding history taking & efficient time management. & also advised not to use certain common mistakes that a c&idate repeatedly does. Dr Sara possess excellent communication skills & also taught me use holistic approach. Thanks for guiding me & helping me pass the exam in first attempt.",
+    rating: 5,
+    icon: "subway:star",
   },
-  { name: "Adam Smith", text: "the fitrst review", url: "www" },
-  { name: "Adam Smith", text: "the fitrst review", url: "www" },
-  { name: "Adam Smith", text: "the fitrst review", url: "www" },
+  {
+    name: "Dr Shoaib Hasan",
+    text: "Best ever combination of well versed and well experienced faculty including former PLAB examiners and practicing NHS senior doctors. They exactly know what is expected in exam and what is needed for a candidate to get through in first attempt. Teaching , Communication and hands on practice for skill station with excellent manikins available at best and most favourite location of Manchester with option of getting accommodation nearby. Highly recommended.",
+    rating: 5,
+    icon: "subway:star",
+  },
 ];
 ---
 
-<div class="">
-  <div class="mt-16 md:mt-16">
-    <div class="flex justify-center">
-      <h2
-        class="text-center lg:text-start text-3xl lg:text-4xl font-bold lg:tracking-tight">
-        Reviews
-      </h2>
-    </div>
+<div class="mt-16">
+  <div class=" mx-auto items-baseline">
+    <h2 class="text-center text-3xl lg:text-4xl font-bold tracking-tight">
+      Reviews
+    </h2>
     <p class="font-semibold text-md tracking-tight text-center text-slate-600">
       What our customers say
     </p>
-    <p class="text-center text-lg my-4 text-slate-600">________</p>
   </div>
 </div>
 
-<div class="">
-  <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="mt-8">
+  <ul class="grid grid-cols-2 gap-4">
     {
       review.map((item) => (
         <li>
-          <div class="bg-red-800 text-white h-64 rounded-lg p-4">
-            <h1>{item.name}</h1>
-            <p>{item.text}</p>
-            <p class="text-sm">{item.url}</p>
+          <div class="flex flex-col bg-red-800 text-white rounded-lg p-4 h-full">
+            <div class="flex mb-2">
+              <h1 class="font-bold pr-2">{item.name}</h1>
+              <Icon class="text-white h-4 pr-1" name={item.icon} />
+              <Icon class="text-white h-4 pr-1" name={item.icon} />
+              <Icon class="text-white h-4 pr-1" name={item.icon} />
+              <Icon class="text-white h-4 pr-1" name={item.icon} />
+              <Icon class="text-white h-4 pr-1" name={item.icon} />
+            </div>
+
+            <p class="text-sm h-full">{item.text}</p>
           </div>
         </li>
       ))
