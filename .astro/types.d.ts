@@ -151,50 +151,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"courses">
 },
 },
-"services": {
-"branding.md": {
-  id: "branding.md",
-  slug: "branding",
-  body: string,
-  collection: "services",
-  data: InferEntrySchema<"services">
-},
-"ecommerce.md": {
-  id: "ecommerce.md",
-  slug: "ecommerce",
-  body: string,
-  collection: "services",
-  data: InferEntrySchema<"services">
-},
-"mobileapps.md": {
-  id: "mobileapps.md",
-  slug: "mobileapps",
-  body: string,
-  collection: "services",
-  data: InferEntrySchema<"services">
-},
-"support.md": {
-  id: "support.md",
-  slug: "support",
-  body: string,
-  collection: "services",
-  data: InferEntrySchema<"services">
-},
-"webapps.md": {
-  id: "webapps.md",
-  slug: "webapps",
-  body: string,
-  collection: "services",
-  data: InferEntrySchema<"services">
-},
-"webdesign.md": {
-  id: "webdesign.md",
-  slug: "webdesign",
-  body: string,
-  collection: "services",
-  data: InferEntrySchema<"services">
-},
-},
 "team": {
 "abas.md": {
   id: "abas.md",
