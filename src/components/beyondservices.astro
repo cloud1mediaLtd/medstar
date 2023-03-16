@@ -5,15 +5,12 @@ import { getCollection } from "astro:content";
 const publishedcoursesEntries = await getCollection("beyond");
 
 // Sort content entries by publication date
-publishedcoursesEntries.sort(function(a, b){return b.data.order - a.data.order});
-
-
+publishedcoursesEntries.sort(function (a, b) {
+  return b.data.order - a.data.order;
+});
 ---
 
-
-
 <main class="">
-
   <div class="my-12 md:mt-16">
     <div class="flex justify-center">
       <h2
@@ -27,7 +24,7 @@ publishedcoursesEntries.sort(function(a, b){return b.data.order - a.data.order})
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto">
     {
       publishedcoursesEntries.map((courseEntry, index) => (
-        <div class="group  shadow-md">
+        <div class="group shadow-md h-max">
           <a href={`/courses/${courseEntry.slug}`}>
             <div class="items-center">
               <Picture
@@ -43,16 +40,17 @@ publishedcoursesEntries.sort(function(a, b){return b.data.order - a.data.order})
                 decoding={index <= 2 ? "sync" : "async"}
                 class="w-full rounded-t-md"
               />
-              <div class="bg-red-800 rounded-b-md">
-                <div class="flex h-14 align-middle items-center justify-center">
+              <div class="bg-red-800 rounded-b-md h-full">
+                <div class="flex h-14 align-middle items-center justify-center grow">
                   <h2 class="font-semibold text-white text-lg tracking-tight text-center">
                     {courseEntry.data.title} courses
                   </h2>
                 </div>
-
-                <p class="text-white text-center text-sm pb-5 px-5">
-                  {courseEntry.data.snippet}
-                </p>
+                <div class="">
+                  <p class="flex flex-col text-white text-center text-sm pb-5 px-5">
+                    {courseEntry.data.snippet}
+                  </p>
+                </div>
               </div>
             </div>
           </a>

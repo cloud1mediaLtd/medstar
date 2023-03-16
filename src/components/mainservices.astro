@@ -27,7 +27,7 @@ publishedcoursesEntries.sort(function (a, b) {
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto">
     {
       publishedcoursesEntries.map((courseEntry, index) => (
-        <div class="group  shadow-md">
+        <div class="group shadow-md h-max">
           <a href={`/courses/${courseEntry.slug}`}>
             <div class="items-center">
               <Picture

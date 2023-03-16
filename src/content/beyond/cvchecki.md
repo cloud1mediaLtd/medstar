@@ -3,10 +3,10 @@ draft: false
 title: "CV Checking Service"
 category: "Beyond Plab 2"
 price: "£15"
-snippet: "Our expert CV-writers will individually review your CV or application form and suggest personalized improvements."
+snippet: "A good CV or application entry is the key to getting shortlisted for a job."
 image: {
-    src: "https://nypost.com/wp-content/uploads/sites/2/2022/02/dr-589.jpg?resize=1536,1024&quality=75&strip=all",
-    alt: "full stack web development"
+    src: "https://johnacademy.co.uk/wp-content/uploads/2017/07/J10-CV-WRITING-AND-INTERVIEW-SKILL-COURSE.jpg",
+    alt: "CV Checking Service"
 }
 order: 1
 icon: "carbon:application-web"

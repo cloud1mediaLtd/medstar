@@ -5,7 +5,7 @@ category: "Beyond Plab 2"
 price: "£145"
 snippet: "This is our most detailed course, providing everything you need to sail through the PLAB 2 exam."
 image: {
-    src: "https://nypost.com/wp-content/uploads/sites/2/2022/02/dr-589.jpg?resize=1536,1024&quality=75&strip=all",
+    src: "https://s31345.pcdn.co/wp-content/uploads/Man-sitting-at-desk-looking-at-CV-1.jpg.webp",
     alt: "full stack web development"
 }
 order: 1

@@ -5,7 +5,7 @@ category: "Beyond Plab 2"
 price: "£15"
 snippet: "Our expert CV-writers will individually review your CV or application form and suggest personalized improvements."
 image: {
-    src: "https://nypost.com/wp-content/uploads/sites/2/2022/02/dr-589.jpg?resize=1536,1024&quality=75&strip=all",
+    src: "https://media.licdn.com/dms/image/C4E12AQF3241QcyXWcg/article-cover_image-shrink_600_2000/0/1520126955006?e=2147483647&v=beta&t=igUhTSM0-UYZ2dzmsfKQJm07HUSxMawjBN0KHq9YJ5U",
     alt: "full stack web development"
 }
 order: 1
