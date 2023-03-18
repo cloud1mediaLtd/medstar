@@ -1,0 +1,70 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const highlights = [
+  {
+    name: "24/7 availability",
+    icon: "fluent:access-time-20-filled",
+  },
+  {
+    name: "Separate for males and females",
+    icon: "zondicons:location-restroom",
+  },
+  {
+    name: "Cleaning service included",
+    icon: "fluent:emoji-sparkle-48-filled",
+  },
+  {
+    name: "Excellent short-term accommodation for PLAB 2 doctors",
+    icon: "subway:star",
+  },
+  {
+    name: "Wifi on the premises",
+    icon: "fluent:wifi-1-20-filled",
+  },
+  {
+    name: "Reasonable rate of £150/week for private single room",
+    icon: "fluent:document-ribbon-28-filled",
+  },
+  {
+    name: "All bills included in the cost",
+    icon: "fluent:document-text-extract-20-filled",
+  },
+  {
+    name: "Located on Curry Mile just 5 minutes walk from the course premises",
+    icon: "fluent:my-location-12-regular",
+  },
+];
+---
+
+
+  <Container>
+    <Sectionhead align="center">
+      <Fragment slot="title">Accommodation</Fragment>
+      <Fragment slot="desc">Best Location in Manchester</Fragment>
+    </Sectionhead>
+
+    <main>
+      <div class="my-16">
+        <ul class="grid grid-cols-4 gap-4">
+          {
+            highlights.map((item) => (
+              <li>
+                
+                  <div class="flex flex-col items-center mb-2">
+                    <div class="flex bg-red-800 rounded-full p-3 w-14 h-14 shrink-0 mb-4">
+                      <Icon class="text-white" name={item.icon} />
+                    </div>
+                    <h1 class="text-center font-bold">{item.name}</h1>
+                  </div>
+                
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </main>
+  </Container>
