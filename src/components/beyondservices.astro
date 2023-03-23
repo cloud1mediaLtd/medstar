@@ -13,11 +13,13 @@ publishedcoursesEntries.sort(function (a, b) {
 <main class="">
   <div class="my-12 md:mt-16">
     <div class="flex justify-center">
-      <h2
-        class="text-center lg:text-start text-2xl lg:text-2xl font-bold lg:tracking-tight"
-      >
-        Beyond Plab
-      </h2>
+      <a href="/courses/beyond"
+        ><h2
+          class="text-center lg:text-start text-2xl lg:text-2xl font-bold lg:tracking-tight"
+        >
+          Beyond Plab
+        </h2>
+      </a>
     </div>
   </div>
 
@@ -43,11 +45,11 @@ publishedcoursesEntries.sort(function (a, b) {
               <div class="bg-medbg rounded-b-md h-full">
                 <div class="flex h-14 align-middle items-center justify-center grow">
                   <h2 class="font-semibold text-white text-lg tracking-tight text-center">
-                    {courseEntry.data.title} courses
+                    {courseEntry.data.title}
                   </h2>
                 </div>
                 <div class="">
-                  <p class="flex flex-col text-white text-center text-sm pb-5 px-5">
+                  <p class="flex flex-col text-white text-center text-md pb-5 px-5">
                     {courseEntry.data.snippet}
                   </p>
                 </div>
