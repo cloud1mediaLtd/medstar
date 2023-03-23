@@ -1,12 +1,12 @@
 ---
 import { Icon } from "astro-icon";
-import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
+
 const highlights = [
   {
-    name: "24/7 availability",
+    name: "24/7 access",
     icon: "fluent:access-time-20-filled",
   },
   {
@@ -18,23 +18,23 @@ const highlights = [
     icon: "fluent:emoji-sparkle-48-filled",
   },
   {
-    name: "Excellent short-term accommodation for PLAB 2 doctors",
+    name: "Excellent accommodation for PLAB 2 doctors",
     icon: "subway:star",
   },
   {
-    name: "Wifi on the premises",
+    name: "Wifi included",
     icon: "fluent:wifi-1-20-filled",
   },
   {
-    name: "Reasonable rate of £150/week for private single room",
+    name: "Starting from £150/week",
     icon: "fluent:document-ribbon-28-filled",
   },
   {
-    name: "All bills included in the cost",
+    name: "All bills included",
     icon: "fluent:document-text-extract-20-filled",
   },
   {
-    name: "Located on Curry Mile just 5 minutes walk from the course premises",
+    name: "Located on Curry Mile, 5 minutes walk from course premises",
     icon: "fluent:my-location-12-regular",
   },
 ];
@@ -49,7 +49,7 @@ const highlights = [
 
     <main>
       <div class="my-16">
-        <ul class="grid grid-cols-4 gap-4">
+        <ul class="grid grid-cols-3 md:grid-cols-4 gap-4">
           {
             highlights.map((item) => (
               <li>

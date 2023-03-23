@@ -5,40 +5,52 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  
-{
+  {
     title: "About us",
     path: "/about",
-    target: ""
+    target: "",
   },
   {
     title: "Courses",
     path: "/courses",
-    target: ""
+    children: [
+      { title: "Plab 2 Courses", path: "/courses/plab2" },
+      { title: "Beyond Plab Courses", path: "/courses/beyond" },
+    ],
+    target: "",
   },
   {
     title: "Team",
     path: "/team",
-    target: ""
-    
+    target: "",
   },
 
   {
     title: "Accommodation",
     path: "/accommodation",
-    target: ""
+    target: "",
   },
-
-  
+  {
+    title: "Resources",
+    path: "/resources",
+    target: "",
+  },
 ];
 ---
 
 <div class="bg-medbg">
-  <header class="flex flex-col lg:flex-row justify-between items-center py-4 max-w-screen-xl mx-auto">
+  <header
+    class="flex flex-col lg:flex-row justify-between items-center py-4 max-w-screen-xl mx-auto"
+  >
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-xl">
-          <img src="..//fa2b3c00-2423-4c15-be39-4d4beda7092d.webp" alt="" width="250" height=""/>
+          <img
+            src="..//fa2b3c00-2423-4c15-be39-4d4beda7092d.webp"
+            alt=""
+            width="250"
+            height=""
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 m-2 text-white" />
@@ -56,6 +68,7 @@ const menuitems = [
                     target={item.target}
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
+                    
                   />
                 )}
 
@@ -64,7 +77,8 @@ const menuitems = [
                     <a
                       href={item.path}
                       target={item.target}
-                      class="flex lg:px-3 py-2 text-white hover:text-gray-200">
+                      class="flex lg:px-3 py-2 text-white hover:text-gray-200"
+                    >
                       {item.title}
                     </a>
                   </li>
@@ -81,7 +95,7 @@ const menuitems = [
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a class="font-bold text-white" href="tel:07865 127757" >07865 127757</a>
+        <a class="font-bold text-white" href="tel:07865 127757">07865 127757</a>
         <Link href="/contact" size="md" style="inverted">Lets Talk</Link>
       </div>
     </div>

@@ -1,0 +1,33 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Beyondservices from "@components/beyondservices.astro";
+import Container from "@components/container.astro";
+import Mainservices from "@components/mainservices.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const publishedcoursesEntries = await getCollection("courses");
+
+// Sort content entries by publication date
+publishedcoursesEntries.sort(function(a, b){return b.data.order - a.data.order});
+
+
+---
+
+<Layout title="courses">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Explore our courses</Fragment>
+      <Fragment slot="desc">
+        Welcome to our courses, take your time and have a read and see if you come
+          across something that your intrested in
+      </Fragment>
+    </Sectionhead>
+
+    <main class="mt-16">
+          
+          <Beyondservices />
+    </main>
+  </Container>
+</Layout>

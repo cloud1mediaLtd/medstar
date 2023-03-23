@@ -3,10 +3,10 @@ import { Dropdown, DropdownItems } from "astro-navbar";
 const { title, lastItem, children, path } = Astro.props;
 ---
 
-<li class="relative z-10">
+<li class="relative z-20">
   <Dropdown class="group">
     <button
-      class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+      class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 text-white hover:text-gray-200">
       <a href={path}><span>{title}</span></a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
