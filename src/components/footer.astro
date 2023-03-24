@@ -1,33 +1,96 @@
 ---
+import { Icon } from "astro-icon";
 import Logos from "./logos.astro";
 
+const social = [
+  { name: "Facebook", icon: "ion:social-facebook" },
+  { name: "Twitter", icon: "entypo-social:twitter" },
+  { name: "Instagram", icon: "ion:social-instagram" },
+  { name: "Youtube", icon: "ion:social-youtube" },
+];
+const menuitems = [
+  {
+    title: "About us",
+    path: "/about",
+    target: "",
+  },
+  {
+    title: "Courses",
+    path: "/courses",
+    target: "",
+  },
+  {
+    title: "Team",
+    path: "/team",
+    target: "",
+  },
+
+  {
+    title: "Accommodation",
+    path: "/accommodation",
+    target: "",
+  },
+  {
+    title: "Resources",
+    path: "/resources",
+    target: "",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    target: "",
+  },
+];
 ---
 
-
-<footer class="mt-10 py-10 bg-slate-800">
-  <p class="text-center text-sm text-slate-500">
-    Built by
-    <a
-    href="/about"
-    target="_blank"
-    rel="noopener"
-    class="hover:underline ">
-    Anas Mahmud
-  </a> All rights reserved © {new Date().getFullYear()}
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Hosted By <a
-      href="https://cloud1media.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      Cloud1media in the UK
-    </a>
-  </p>
+<footer class="mt-10 py-5 bg-slate-800">
+  <div class="flex justify-between items-center py-4 max-w-screen-xl mx-auto">
+    <div>
+      <ul class="grid grid-cols-2 gap-2">
+        {
+          menuitems.map((item, index) => (
+            <li>
+              <a
+                href={item.path}
+                target={item.target}
+                class="flex py-2 text-white hover:text-gray-200"
+              >
+                {item.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="flex place-content-end">
+      <ul class="flex gap-4">
+        {
+          social.map((item) => (
+            <li>
+              <div class="flex flex-col mb-2">
+                <Icon class="text-white h-6" name={item.icon} />
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="flex justify-between items-center py-4 max-w-screen-xl mx-auto border-t border-white/10">
+    <div class="">
+      <p class="text-center text-xs text-slate-200 mt-1">
+        Hosted By <a
+          href="https://cloud1media.com"
+          target="_blank"
+          rel="noopener"
+          class="hover:underline"
+        >
+          Cloud1media Ltd
+        </a>
+      </p>
+    </div>
+    <div class="text-center text-xs text-slate-200 mt-1">
+      All rights reserved © {new Date().getFullYear()}
+    </div>
+  </div>
 </footer>
