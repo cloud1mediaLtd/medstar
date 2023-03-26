@@ -1,0 +1,25 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+---
+
+<Layout title="Resources">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Resources</Fragment>
+        <Fragment slot="desc">Resources</Fragment>
+      </Sectionhead>
+  
+      <main>
+        <div class="mt-5 grid grid-cols-2 gap-5">
+          <div class=""><YouTube id="xtTy5nKay_Y" /></div>
+          <div class=""><YouTube id="xtTy5nKay_Y" /></div>
+          
+        </div>
+        
+      </main>
+    </Container>
+  </Layout>

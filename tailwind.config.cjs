@@ -5,11 +5,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],},
-        colors: {
-          'medbg': '#1A6C79',
+        sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        medbg: "#1A6C79",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), "@tailwindcss/aspect-ratio"],
 };
