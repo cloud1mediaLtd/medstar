@@ -32,24 +32,29 @@ const { Content } = await entry.render();
         position="center"
         class="w-full rounded-t z-0"
       />
-      
-    </div> 
-  
-      <div class="mx-auto max-w-[735px] my-8 pb-8 text-center border-b">
-        <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-          {entry.data.category}
-        </span>
-        <h1
-          class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-black">
-          {entry.data.title} course
-        </h1> 
-      </div>
-    
-    <div class="mx-auto prose prose-lg mt-6">
-        <Content />
-        
-        
     </div>
+
+    <div class="mx-auto max-w-[735px] my-8 pb-8 text-center border-b">
+      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+        {entry.data.category}
+      </span>
+      <h1
+        class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-black"
+      >
+        {entry.data.title} course
+      </h1>
+    </div>
+
+    <div class="mx-auto prose prose-lg mt-6">
+      <Content />
+    </div>
+    <div class="mx-auto max-w-[735px] p-8 md:p-8 bg-gray-100 rounded-md my-5">
+      <p class="text-2xl text-center mb-5">Course Dates</p>
+      <ul class="flex flex-wrap items-center justify-center gap-7">
+        {entry.data.dates.map((item: any) => <li class="list-none">{item}</li>)}
+      </ul>
+    </div>
+   
     <div class="text-center mt-8">
       <a
         href="/courses"
