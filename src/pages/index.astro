@@ -1,6 +1,7 @@
 ---
 import Aboutindexsection from "@components/aboutindexsection.astro";
 import Accommodation from "@components/accommodation.astro";
+import Accordian from "@components/accordian.astro";
 import Beyondservices from "@components/beyondservices.astro";
 import Container from "@components/container.astro";
 import Courseindexcontainer from "@components/courseindexcontainer.astro";
@@ -15,12 +16,14 @@ import Layout from "@layouts/Layout.astro";
   <Hero />
   <Container>
     <Features />
+    
     <Aboutindexsection />
     <Courseindexcontainer>
       <Mainservices />
       <Beyondservices />
     </Courseindexcontainer>
     <Accommodation />
+    <Accordian />
   <Reviews />
   </Container>
 </Layout>

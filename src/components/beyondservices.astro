@@ -1,6 +1,7 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
+import Card from "./ui/card.astro";
 
 const publishedcoursesEntries = await getCollection("beyond");
 
@@ -23,38 +24,19 @@ publishedcoursesEntries.sort(function (a, b) {
     </div>
   </div>
 
+ 
+
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto">
     {
       publishedcoursesEntries.map((courseEntry, index) => (
-        <div class="group shadow-md h-max">
+        <div class="group shadow-md h-max ">
           <a href={`/courses/${courseEntry.slug}`}>
-            <div class="items-center">
-              <Picture
-                src={courseEntry.data.image.src}
+            <Card image={courseEntry.data.image.src}
                 alt={courseEntry.data.image.alt}
-                sizes="(max-width: 800px) 100vw, 800px"
-                widths={[200, 400, 800]}
-                aspectRatio="16:9"
-                background="#ffffff"
-                fit="cover"
-                position="center"
-                loading={index <= 2 ? "eager" : "lazy"}
-                decoding={index <= 2 ? "sync" : "async"}
-                class="w-full rounded-t-md"
-              />
-              <div class="bg-medbg rounded-b-md h-full">
-                <div class="flex h-14 align-middle items-center justify-center grow">
-                  <h2 class="font-semibold text-white text-lg tracking-tight text-center">
-                    {courseEntry.data.title}
-                  </h2>
-                </div>
-                <div class="">
-                  <p class="flex flex-col text-white text-center text-md pb-5 px-5">
-                    {courseEntry.data.snippet}
-                  </p>
-                </div>
-              </div>
-            </div>
+                index={index}
+                title={courseEntry.data.title}
+                snippet={courseEntry.data.snippet}
+                 />
           </a>
         </div>
       ))

@@ -1,3 +1,37 @@
 ---
+import { Picture } from "@astrojs/image/components";
+
+
+const { title, image, alt, index, snippet } = Astro.props;
+
+
 
 ---
+
+
+    <div class="items-center">
+      <Picture
+        src={image}
+        alt={alt}
+        sizes="(max-width: 800px) 100vw, 800px"
+        widths={[200, 400, 800]}
+        aspectRatio="16:9"
+        background="#ffffff"
+        fit="cover"
+        position="center"
+        loading={index <= 2 ? "eager" : "lazy"}
+        decoding={index <= 2 ? "sync" : "async"}
+        class="w-full rounded-t-md"
+      />
+      <div class="bg-medbg rounded-b-md">
+        <div class="flex h-14 align-middle items-center justify-center">
+          <h2 class="font-semibold text-white text-lg tracking-tight text-center">
+            {title} courses
+          </h2>
+        </div>
+
+        <p class="text-white text-center text-md pb-5 px-5">
+          {snippet}
+        </p>
+      </div>
+    </div>

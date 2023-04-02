@@ -1,0 +1,77 @@
+---
+import Sectionhead from "./sectionhead.astro";
+---
+
+
+<Sectionhead align="center">
+    <Fragment slot="title">FAQ</Fragment>
+    <Fragment slot="desc">Frequently asked questions</Fragment>
+  </Sectionhead>
+
+  
+<div class=" flex justify-center">
+  
+    <div
+      class="bg-white mx-auto border border-gray-200"
+      x-data="{selected:1}"
+    >
+      <ul class="shadow-md">
+        <li class="relative border-b ">
+          <button
+            type="button"
+            class="w-full px-6 py-6 text-left"
+            x-on:click="selected !== 1 ? selected = 1 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <span> Do you offer accommodation?</span>
+              <span class="ico-plus"></span>
+            </div>
+          </button>
+
+          <div
+            class="relative overflow-hidden transition-all max-h-0 duration-700"
+            style=""
+            x-ref="container1"
+            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+          >
+            <div class="p-6">
+              <p>
+                We understand that coming to a new country is a big challenge. Therefore, we believe in offering a one-stop solution to our candidates. We offer affordable yet convenient and comfortable accommodation within easy walking distance of our centre and all the amenities within easy reach. The accommodation is only for our PLAB students and separate for males and females. Please contact us for more details. .
+              </p>
+              
+            </div>
+          </div>
+        </li>
+        <li class="relative border-b border-gray-200">
+            <button
+              type="button"
+              class="w-full px-6 py-6 text-left"
+              x-on:click="selected !== 2 ? selected = 2 : selected = null"
+            >
+              <div class="flex items-center justify-between">
+                <span> Do you offer accommodation?</span>
+                <span class="ico-plus"></span>
+              </div>
+            </button>
+  
+            <div
+              class="relative overflow-hidden transition-all max-h-0 duration-700"
+              style=""
+              x-ref="container1"
+              x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+            >
+              <div class="p-6">
+                <p>
+                  We understand that coming to a new country is a big challenge. Therefore, we believe in offering a one-stop solution to our candidates. We offer affordable yet convenient and comfortable accommodation within easy walking distance of our centre and all the amenities within easy reach. The accommodation is only for our PLAB students and separate for males and females. Please contact us for more details. .
+                </p>
+                
+              </div>
+            </div>
+          </li>
+
+        
+      </ul>
+    </div>
+
+  
+</div>
