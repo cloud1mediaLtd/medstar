@@ -1,77 +1,152 @@
 ---
+import { Icon } from "astro-icon";
 import Sectionhead from "./sectionhead.astro";
 ---
 
-
 <Sectionhead align="center">
-    <Fragment slot="title">FAQ</Fragment>
-    <Fragment slot="desc">Frequently asked questions</Fragment>
-  </Sectionhead>
+  <Fragment slot="title">FAQ</Fragment>
+  <Fragment slot="desc">Frequently asked questions</Fragment>
+</Sectionhead>
 
-  
 <div class="pt-5 flex justify-center">
-  
-    <div
-      class="bg-white mx-auto border border-gray-200"
-      x-data="{selected:1}"
-    >
-      <ul class="shadow-md">
-        <li class="relative border-b ">
-          <button
-            type="button"
-            class="w-full px-6 py-6 text-left"
-            x-on:click="selected !== 1 ? selected = 1 : selected = null"
-          >
-            <div class="flex items-center justify-between">
-              <span> Do you offer accommodation?</span>
-              <span class="ico-plus"></span>
-            </div>
-          </button>
-
-          <div
-            class="relative overflow-hidden transition-all max-h-0 duration-700"
-            style=""
-            x-ref="container1"
-            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-          >
-            <div class="p-6">
-              <p>
-                We understand that coming to a new country is a big challenge. Therefore, we believe in offering a one-stop solution to our candidates. We offer affordable yet convenient and comfortable accommodation within easy walking distance of our centre and all the amenities within easy reach. The accommodation is only for our PLAB students and separate for males and females. Please contact us for more details. .
-              </p>
-              
-            </div>
+  <div class="bg-white mx-auto border border-gray-200" x-data="{selected:1}">
+    <ul class="shadow-md">
+      <li class="relative border-b border-gray-200">
+        <button
+          type="button"
+          class="w-full px-6 py-6 text-left"
+          x-on:click="selected !== 1 ? selected = 1 : selected = null"
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-semibold"> Do you offer accommodation?</span>
+            <Icon class="h-4" name="mi:add" />
           </div>
-        </li>
-        <li class="relative border-b border-gray-200">
-            <button
-              type="button"
-              class="w-full px-6 py-6 text-left"
-              x-on:click="selected !== 2 ? selected = 2 : selected = null"
-            >
-              <div class="flex items-center justify-between">
-                <span> Do you offer accommodation?</span>
-                <span class="ico-plus"></span>
-              </div>
-            </button>
-  
-            <div
-              class="relative overflow-hidden transition-all max-h-0 duration-700"
-              style=""
-              x-ref="container1"
-              x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-            >
-              <div class="p-6">
-                <p>
-                  We understand that coming to a new country is a big challenge. Therefore, we believe in offering a one-stop solution to our candidates. We offer affordable yet convenient and comfortable accommodation within easy walking distance of our centre and all the amenities within easy reach. The accommodation is only for our PLAB students and separate for males and females. Please contact us for more details. .
-                </p>
-                
-              </div>
-            </div>
-          </li>
+        </button>
 
-        
-      </ul>
-    </div>
+        <div
+          class="relative overflow-hidden transition-all max-h-0 duration-700"
+          style=""
+          x-ref="container1"
+          x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+        >
+          <div class="p-6">
+            <p>
+              We understand that coming to a new country is a big challenge.
+              Therefore, we believe in offering a one-stop solution to our
+              candidates. We offer affordable yet convenient and comfortable
+              accommodation within easy walking distance of our centre and all
+              the amenities within easy reach. The accommodation is only for our
+              PLAB students and separate for males and females. Please contact
+              us for more details.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="relative border-b border-gray-200">
+        <button
+          type="button"
+          class="w-full px-6 py-6 text-left"
+          x-on:click="selected !== 2 ? selected = 2 : selected = null"
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-semibold">
+              Where is the course center located?</span
+            >
+            <Icon class="h-4" name="mi:add" />
+          </div>
+        </button>
 
-  
+        <div
+          class="relative overflow-hidden transition-all max-h-0 duration-700"
+          style=""
+          x-ref="container1"
+          x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+        >
+          <div class="p-6">
+            <p class="pb-5">
+              Our centre is ideally located on the fascinating Wilmslow Road in
+              Manchester, famously known as ‘Curry Mile’, where you will find:
+            </p>
+            <ul class="list-disc list-inside">
+              <li>Restaurants serving a variety of cuisines</li>
+              <li>Supermarkets</li>
+              <li>Pharmacies</li>
+              <li>Post Office</li>
+              <li>ATMs</li>
+              <li>Public transport</li>
+              <li>And much more</li>
+            </ul>
+            <p class="py-5">We are also close to:</p>
+            <ul class="list-disc list-inside">
+              <li>GMC buildings (where you will take your PLAB exam)</li>
+              <li>Manchester University</li>
+              <li>Manchester Royal Infirmary</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative border-b border-gray-200">
+        <button
+          type="button"
+          class="w-full px-6 py-6 text-left"
+          x-on:click="selected !== 3 ? selected = 3 : selected = null"
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-semibold"> Do you offer accommodation?</span>
+            <Icon class="h-4" name="mi:add" />
+          </div>
+        </button>
+
+        <div
+          class="relative overflow-hidden transition-all max-h-0 duration-700"
+          style=""
+          x-ref="container1"
+          x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+        >
+          <div class="p-6">
+            <p>
+              We understand that coming to a new country is a big challenge.
+              Therefore, we believe in offering a one-stop solution to our
+              candidates. We offer affordable yet convenient and comfortable
+              accommodation within easy walking distance of our centre and all
+              the amenities within easy reach. The accommodation is only for our
+              PLAB students and separate for males and females. Please contact
+              us for more details.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="relative border-b border-gray-200">
+        <button
+          type="button"
+          class="w-full px-6 py-6 text-left"
+          x-on:click="selected !== 4 ? selected = 4 : selected = null"
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-semibold"> Do you offer accommodation?</span>
+            <Icon class="h-4" name="mi:add" />
+          </div>
+        </button>
+
+        <div
+          class="relative overflow-hidden transition-all max-h-0 duration-700"
+          style=""
+          x-ref="container1"
+          x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+        >
+          <div class="p-6">
+            <p>
+              We understand that coming to a new country is a big challenge.
+              Therefore, we believe in offering a one-stop solution to our
+              candidates. We offer affordable yet convenient and comfortable
+              accommodation within easy walking distance of our centre and all
+              the amenities within easy reach. The accommodation is only for our
+              PLAB students and separate for males and females. Please contact
+              us for more details.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
