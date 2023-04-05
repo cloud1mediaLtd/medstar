@@ -11,7 +11,7 @@ image: {
 order: 1
 icon: "carbon:application-web"
 year: "2023"
-dates: [02/03/23 to 13/03/23, 27/04/23 to 08/05/23, 08/06/23 to 19/06/23, 13/07/23 to 24/07/23, 23/08/23 to 03/09/23, 28/09/23 to 09/10/23, 02/11/23 to 13/11/23, 23/11/23 to 04/12/23]
+dates: [DATES TO BE CONFIRMED]
 ---
 
 At Medastra, we recognise that good communication skills are essential for success in the PLAB 2 exam and for a prosperous career as a doctor in the UK.

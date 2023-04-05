@@ -7,7 +7,10 @@ import { Picture } from "@astrojs/image/components";
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
   const courseEntries = await getCollection("courses");
-  return courseEntries.map((entry) => ({
+  const beyondEntries = await getCollection("beyond"); // Fetch beyond collection data
+  const allEntries = [...courseEntries, ...beyondEntries]; // Merge both collections' data
+
+  return allEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
