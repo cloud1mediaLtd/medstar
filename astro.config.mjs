@@ -6,9 +6,12 @@ import sitemap from "@astrojs/sitemap";
 import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
+import react from "@astrojs/react";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://anasmahmud.com",
   integrations: [tailwind(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), alpinejs()]
+  }), mdx(), sitemap(), alpinejs(), react()]
 });
