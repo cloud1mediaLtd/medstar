@@ -1,21 +1,16 @@
----
----
+import React, { useEffect } from "react";
+import mapboxgl from "mapbox-gl";
 
-<div class="pt-8">
-  <div id="map" style={{ width: "100%", height: "400px" }}></div>
-</div>
+const Location = () => {
+  useEffect(() => {
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiYW5hc21haG11ZCIsImEiOiJjbGY1NHh6Y3kwaTJqNDByMHl3amxuamF1In0.ETEqb0nPmL-cqwfMkXP2cg";
 
-<script>
-  import mapboxgl from "mapbox-gl";
-
-  function initMap() {
     const map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/anasmahmud/clf547s78009m01mlx4ws1cxh",
       center: [-2.2234355305687528, 53.45299403486571],
-      zoom: "16.9",
-      accessToken:
-        "pk.eyJ1IjoiYW5hc21haG11ZCIsImEiOiJjbGY1NHh6Y3kwaTJqNDByMHl3amxuamF1In0.ETEqb0nPmL-cqwfMkXP2cg",
+      zoom: 16.9,
       pitch: 35,
       bearing: -35,
       antialias: true,
@@ -25,16 +20,22 @@
     map.addControl(new mapboxgl.NavigationControl());
 
     // Create a new marker.
-    const marker = new mapboxgl.Marker()
+    new mapboxgl.Marker()
       .setLngLat([-2.2234355305687528, 53.45299403486571])
       .addTo(map);
 
-    map.on("style.load", () => {
+    map.on("load", () => {
       // Insert the layer beneath any symbol layer.
       const layers = map.getStyle().layers;
-      const labelLayerId = layers.find(
+      const labelLayer = layers.find(
         (layer) => layer.type === "symbol" && layer.layout["text-field"]
-      ).id;
+      );
+
+      if (!labelLayer) {
+        return;
+      }
+
+      const labelLayerId = labelLayer.id;
 
       // The 'building' layer in the Mapbox Streets
       // vector tileset contains building height data
@@ -77,13 +78,15 @@
         labelLayerId
       );
     });
-  }
 
-  initMap();
+    return () => map.remove();
+  }, []);
 
-  export default {
-    onMount() {
-      initMap();
-    },
-  };
-</script>
+  return (
+    <div className="pt-8">
+      <div id="map" style={{ width: "100%", height: "400px" }} />
+    </div>
+  );
+};
+
+export default Location;

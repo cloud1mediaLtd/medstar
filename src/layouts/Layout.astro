@@ -2,7 +2,7 @@
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
-import Location from "@components/map/location.astro";
+import Location from "@components/map/location.jsx";
 import "@fontsource/inter/variable.css";
 
 export interface Props {
@@ -71,7 +71,7 @@ const makeTitle = title
   <body>
     <Navbar />
     <slot />
-    <Location class="pt-5" />
+    <Location client:visible />
     <Footer />
     <style is:global>
       /* Improve Page speed */
