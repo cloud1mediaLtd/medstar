@@ -3,68 +3,126 @@ import { Icon } from "astro-icon";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-
 const highlights = [
   {
     name: "24/7 access",
     icon: "fluent:access-time-20-filled",
+    desc: "24/7 access",
   },
   {
-    name: "Separate for males and females",
+    name: "Special Requirements",
     icon: "zondicons:location-restroom",
+    desc: "Separate for males and females",
   },
   {
-    name: "Cleaning service included",
+    name: "Services Included",
     icon: "fluent:emoji-sparkle-48-filled",
+    desc: "Cleaning service included",
   },
   {
-    name: "Excellent accommodation for PLAB 2 doctors",
+    name: "Excellent Accommodation",
     icon: "subway:star",
+    desc: "Excellent accommodation for PLAB 2 doctors",
   },
   {
-    name: "Wifi included",
+    name: "Wifi",
     icon: "fluent:wifi-1-20-filled",
+    desc: "Super fast wifi included",
   },
   {
-    name: "Starting from £150/week",
+    name: "Affordable Rates",
     icon: "fluent:document-ribbon-28-filled",
+    desc: "Starting from £150/week",
   },
   {
-    name: "All bills included",
+    name: "Bills included",
     icon: "fluent:document-text-extract-20-filled",
+    desc: "Bills included",
   },
   {
-    name: "Located on Curry Mile, 5 minutes walk from course premises",
+    name: "Prime Location",
     icon: "fluent:my-location-12-regular",
+    desc: "Located on Curry Mile, 5 minutes walk from course premises",
   },
 ];
 ---
 
+<Container>
+  <Sectionhead align="center">
+    <Fragment slot="title">Accommodation</Fragment>
+    <Fragment slot="desc">Best Location in Manchester</Fragment>
+  </Sectionhead>
 
-  <Container>
-    <Sectionhead align="center">
-      <Fragment slot="title">Accommodation</Fragment>
-      <Fragment slot="desc">Best Location in Manchester</Fragment>
-    </Sectionhead>
+  <main>
+    <div class="my-16">
+      <ul class="grid grid-cols-3 md:grid-cols-4 gap-4">
+        {
+          highlights.map((item) => (
+            <li>
+              <div class="flex flex-col items-center mb-2">
+                <div class="flex bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4">
+                  <Icon class="text-white" name={item.icon} />
+                </div>
 
-    <main>
-      <div class="my-16">
-        <ul class="grid grid-cols-3 md:grid-cols-4 gap-4">
-          {
-            highlights.map((item) => (
-              <li>
-                
-                  <div class="flex flex-col items-center mb-2">
-                    <div class="flex bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4">
-                      <Icon class="text-white" name={item.icon} />
-                    </div>
-                    <h1 class="text-center font-bold">{item.name}</h1>
+                <button
+                  data-popover-target={item.name}
+                  data-popover-placement="bottom-end"
+                  type="button"
+                  class="flex"
+                >
+                  <h1 class="text-center font-bold">{item.name}</h1>
+                  <>
+                    <svg
+                      class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="sr-only">Show information</span>
+                  </>
+                </button>
+                <div
+                  data-popover
+                  id={item.name}
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400"
+                >
+                  <div class="p-3 space-y-2">
+                    <p>{item.desc}</p>
+                    <a
+                      href="#"
+                      class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700"
+                    >
+                      Book{" "}
+                      <svg
+                        class="w-4 h-4 ml-1"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
                   </div>
-                
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </main>
-  </Container>
+                  <div data-popper-arrow />
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </main>
+</Container>

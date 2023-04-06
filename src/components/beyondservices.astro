@@ -11,35 +11,20 @@ publishedcoursesEntries.sort(function (a, b) {
 });
 ---
 
-<main class="">
-  <div class="my-12 md:mt-16">
-    <div class="flex justify-center">
-      <a href="/courses/beyond"
-        ><h2
-          class="text-center lg:text-start text-2xl lg:text-2xl font-bold lg:tracking-tight"
-        >
-          Beyond Plab
-        </h2>
-      </a>
-    </div>
-  </div>
-
- 
-
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto">
-    {
-      publishedcoursesEntries.map((courseEntry, index) => (
-        <div class="group shadow-md h-max ">
-          <a href={`/courses/${courseEntry.slug}`}>
-            <Card image={courseEntry.data.image.src}
-                alt={courseEntry.data.image.alt}
-                index={index}
-                title={courseEntry.data.title}
-                snippet={courseEntry.data.snippet}
-                 />
-          </a>
-        </div>
-      ))
-    }
-  </div>
-</main>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto py-8">
+  {
+    publishedcoursesEntries.map((courseEntry, index) => (
+      <div class="group shadow-md h-max ">
+        <Card
+          href={courseEntry.slug}
+          image={courseEntry.data.image.src}
+          alt={courseEntry.data.image.alt}
+          index={index}
+          title={courseEntry.data.title}
+          snippet={courseEntry.data.snippet}
+          category={courseEntry.data.category}
+        />
+      </div>
+    ))
+  }
+</div>

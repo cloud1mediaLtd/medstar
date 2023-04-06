@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Comprehensive"
+title: "Comprehensive Course"
 category: "Plab 2"
 price: "£595"
 snippet: "This is our most detailed course, providing everything you need to sail through the PLAB 2 exam."

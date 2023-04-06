@@ -1,6 +1,7 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
+import Card from "./ui/card.astro";
 
 const publishedcoursesEntries = await getCollection("courses");
 
@@ -10,56 +11,20 @@ publishedcoursesEntries.sort(function (a, b) {
 });
 ---
 
-
-
-<main class="">
-
-  <div class="my-12">
-    <div class="flex justify-center">
-      <a href="/courses/plab2">
-      <h2
-        class="text-center lg:text-start text-2xl lg:text-2xl font-bold lg:tracking-tight"
-      >
-        Plab 2 Courses
-      </h2>
-    </a>
-    </div>
-  </div>
-
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto">
-    {
-      publishedcoursesEntries.map((courseEntry, index) => (
-        <div class="group shadow-md h-max">
-          <a href={`/courses/${courseEntry.slug}`}>
-            <div class="items-center">
-              <Picture
-                src={courseEntry.data.image.src}
-                alt={courseEntry.data.image.alt}
-                sizes="(max-width: 800px) 100vw, 800px"
-                widths={[200, 400, 800]}
-                aspectRatio="16:9"
-                background="#ffffff"
-                fit="cover"
-                position="center"
-                loading={index <= 2 ? "eager" : "lazy"}
-                decoding={index <= 2 ? "sync" : "async"}
-                class="w-full rounded-t-md"
-              />
-              <div class="bg-medbg rounded-b-md">
-                <div class="flex h-14 align-middle items-center justify-center">
-                  <h2 class="font-semibold text-white text-lg tracking-tight text-center">
-                    {courseEntry.data.title} courses
-                  </h2>
-                </div>
-
-                <p class="text-white text-center text-md pb-5 px-5">
-                  {courseEntry.data.snippet}
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      ))
-    }
-  </div>
-</main>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+  {
+    publishedcoursesEntries.map((courseEntry, index) => (
+      <div class="group shadow-md h-max ">
+        <Card
+          href={courseEntry.slug}
+          image={courseEntry.data.image.src}
+          alt={courseEntry.data.image.alt}
+          index={index}
+          title={courseEntry.data.title}
+          snippet={courseEntry.data.snippet}
+          category={courseEntry.data.category}
+        />
+      </div>
+    ))
+  }
+</div>

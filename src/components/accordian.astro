@@ -8,206 +8,221 @@ import Sectionhead from "./sectionhead.astro";
   <Fragment slot="desc">Frequently asked questions</Fragment>
 </Sectionhead>
 
-<div class="pt-5 flex justify-center">
-  <div
-    class="bg-medbg mx-auto border border-gray-200 shadow-md rounded-lg text-white"
-    x-data="{selected:1}"
-  >
-    <ul class="">
-      <li class="relative border-b border-gray-200">
-        <button
-          type="button"
-          class="w-full px-6 py-6 text-left"
-          x-on:click="selected !== 1 ? selected = 1 : selected = null"
+<div class="my-16">
+  <div id="accordion-collapse" data-accordion="collapse">
+    <h2 id="accordion-collapse-heading-1">
+      <button
+        type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+        data-accordion-target="#accordion-collapse-body-1"
+        aria-expanded="true"
+        aria-controls="accordion-collapse-body-1"
+      >
+        <span>Do you offer accommodation?</span>
+        <svg
+          data-accordion-icon
+          class="w-6 h-6 rotate-180 shrink-0 transition-all duration-400"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path></svg
         >
-          <div class="flex items-center justify-between">
-            <span class="font-semibold text-white">
-              Do you offer accommodation?</span
-            >
-            <Icon
-              class="text-white h-4 transition-all duration-400"
-              name="mi:add"
-              x-bind:class="selected === 1 ? 'rotate-45' : ''"
-            />
-          </div>
-        </button>
-
-        <div
-          class="relative overflow-hidden transition-all max-h-0 duration-700"
-          style=""
-          x-ref="container1"
-          x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+      </button>
+    </h2>
+    <div
+      id="accordion-collapse-body-1"
+      class="hidden"
+      aria-labelledby="accordion-collapse-heading-1"
+    >
+      <div
+        class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 transition-all duration-400"
+      >
+        <p class="mb-2 text-gray-500 dark:text-gray-400">
+          We understand that coming to a new country is a big challenge.
+          Therefore, we believe in offering a one-stop solution to our
+          candidates. We offer affordable yet convenient and comfortable
+          accommodation within easy walking distance of our centre and all the
+          amenities within easy reach. The accommodation is only for our PLAB
+          students and separate for males and females. Please contact us for
+          more details.
+        </p>
+        <p class="text-gray-500 dark:text-gray-400">
+          Check out our guide and <a
+            href="/docs/getting-started/introduction/"
+            class="text-medbg dark:text-blue-500 hover:underline">Read more</a
+          >
+        </p>
+      </div>
+    </div>
+    <h2 id="accordion-collapse-heading-2">
+      <button
+        type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+        data-accordion-target="#accordion-collapse-body-2"
+        aria-expanded="false"
+        aria-controls="accordion-collapse-body-2"
+      >
+        <span>Where is the course center located?</span>
+        <svg
+          data-accordion-icon
+          class="w-6 h-6 shrink-0 transition-all duration-400"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path></svg
         >
-          <div class="p-6">
-            <p class="text-white">
-              We understand that coming to a new country is a big challenge.
-              Therefore, we believe in offering a one-stop solution to our
-              candidates. We offer affordable yet convenient and comfortable
-              accommodation within easy walking distance of our centre and all
-              the amenities within easy reach. The accommodation is only for our
-              PLAB students and separate for males and females. Please contact
-              us for more details.
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="relative border-b border-gray-200">
-        <button
-          type="button"
-          class="w-full px-6 py-6 text-left"
-          x-on:click="selected !== 2 ? selected = 2 : selected = null"
+      </button>
+    </h2>
+    <div
+      id="accordion-collapse-body-2"
+      class="hidden"
+      aria-labelledby="accordion-collapse-heading-2"
+    >
+      <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">
+          Our centre is ideally located on the fascinating Wilmslow Road in
+          Manchester, famously known as ‘Curry Mile’, where you will find:
+        </p>
+        <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+          <li>Restaurants serving a variety of cuisines</li>
+          <li>Supermarkets</li>
+          <li>Pharmacies</li>
+          <li>Post Office</li>
+          <li>ATMs</li>
+          <li>Public transport</li>
+          <li>And much more</li>
+        </ul>
+        <p class="mb-2 text-gray-500 dark:text-gray-400">
+          We are also close to:
+        </p>
+        <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+          <li>GMC buildings (where you will take your PLAB exam)</li>
+          <li>Manchester University</li>
+          <li>Manchester Royal Infirmary</li>
+        </ul>
+      </div>
+    </div>
+    <h2 id="accordion-collapse-heading-3">
+      <button
+        type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+        data-accordion-target="#accordion-collapse-body-3"
+        aria-expanded="false"
+        aria-controls="accordion-collapse-body-3"
+      >
+        <span>Why is your course data concise?</span>
+        <svg
+          data-accordion-icon
+          class="w-6 h-6 shrink-0 transition-all duration-400"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path></svg
         >
-          <div class="flex items-center justify-between">
-            <span class="font-semibold text-white">
-              Where is the course center located?</span
-            >
-            <Icon
-              class="h-4 transition-all duration-400 text-white"
-              name="mi:add"
-              x-bind:class="selected === 2 ? 'rotate-45 ' : ''"
-            />
-          </div>
-        </button>
-
-        <div
-          class="relative overflow-hidden transition-all max-h-0 duration-700"
-          style=""
-          x-ref="container2"
-          x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+      </button>
+    </h2>
+    <div
+      id="accordion-collapse-body-3"
+      class="hidden"
+      aria-labelledby="accordion-collapse-heading-3"
+    >
+      <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+        <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+          <li>
+            Our course is unique because it is the ONLY course delivered by
+            senior, practicing doctors within the NHS who have decades of
+            clinical and medical training experience, thus making them the most
+            qualified trainers by far!
+          </li>
+          <li>
+            We follow GMC's guidance on Good Medical Practice and pride
+            ourselves on our ethical practice.
+          </li>
+          <li>
+            We offer a keynote lecture by a former GMC PLAB EXAMINER who will
+            give you extremely valuable tips to be successful on the day of your
+            exam.
+          </li>
+          <li>
+            We offer you a UNIQUE 8 days of structured and supervised PRACTICE
+            SESSIONS under timed exam conditions.
+          </li>
+          <li>We do NOT teach or encourage scripts.</li>
+          <li>
+            We do NOT teach or obtain real GMC PLAB cases as we believe this is
+            very unethical and it puts candidates at a significant disadvantage
+            trying to predict cases that might be different.
+          </li>
+          <li>
+            Our mock exams are also conducted by the senior doctors to ensure
+            that you receive the correct guidance and feedback in order to
+            maximize your chances of success in the PLAB2 exam and beyond.
+          </li>
+          <li>
+            You will get PERSONALISED feedback from a PLAB examiner on your
+            performance in the mock exams.
+          </li>
+          <li>
+            We will also have trained simulators as patients for the mock exams,
+            just like you will face in the PLAB2 exam so that you are well
+            prepared for this.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h2 id="accordion-collapse-heading-4">
+      <button
+        type="button"
+        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+        data-accordion-target="#accordion-collapse-body-4"
+        aria-expanded="true"
+        aria-controls="accordion-collapse-body-4"
+      >
+        <span>What makes Medastra differant?</span>
+        <svg
+          data-accordion-icon
+          class="w-6 h-6 rotate-180 shrink-0 transition-all duration-400"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path></svg
         >
-          <div class="p-6">
-            <p class="pb-5 text-white">
-              Our centre is ideally located on the fascinating Wilmslow Road in
-              Manchester, famously known as ‘Curry Mile’, where you will find:
-            </p>
-            <ul class="list-disc list-inside text-white">
-              <li>Restaurants serving a variety of cuisines</li>
-              <li>Supermarkets</li>
-              <li>Pharmacies</li>
-              <li>Post Office</li>
-              <li>ATMs</li>
-              <li>Public transport</li>
-              <li>And much more</li>
-            </ul>
-            <p class="py-5">We are also close to:</p>
-            <ul class="list-disc list-inside">
-              <li>GMC buildings (where you will take your PLAB exam)</li>
-              <li>Manchester University</li>
-              <li>Manchester Royal Infirmary</li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="relative border-b border-gray-200">
-        <button
-          type="button"
-          class="w-full px-6 py-6 text-left"
-          x-on:click="selected !== 3 ? selected = 3 : selected = null"
-        >
-          <div class="flex items-center justify-between">
-            <span class="font-semibold text-white">
-              Why is your course data concise?</span
-            >
-            <Icon
-              class="h-4 transition-all duration-400"
-              name="mi:add"
-              x-bind:class="selected === 3 ? 'rotate-45' : ''"
-            />
-          </div>
-        </button>
-
-        <div
-          class="relative overflow-hidden transition-all max-h-0 duration-700"
-          style=""
-          x-ref="container3"
-          x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
-        >
-          <div class="p-6">
-            <p>
-              Our aim is that all our students pass the PLAB exam in their first
-              attempt. We don't believe in overburdening our students with
-              unnecessary details and duplicate scenarios, or memorising lengthy
-              scripts which we are against. Our course consists of specially
-              designed frameworks, keys and guidance that will prepare you for
-              any eventuality/scenario/presentation that you might encounter in
-              your exam and you will be able to deal with it confidently and
-              correctly. Furthermore, the written material is only supposed to
-              be used in addition to attending the actual course either online
-              or face-to-face. Many points that are just mentioned in the
-              written material will be further explained and demonstrated during
-              the course.
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="relative border-b border-gray-200">
-        <button
-          type="button"
-          class="w-full px-6 py-6 text-left"
-          x-on:click="selected !== 4 ? selected = 4 : selected = null"
-        >
-          <div class="flex items-center justify-between">
-            <span class="font-semibold"> Do you offer accommodation?</span>
-            <Icon
-              class="h-4 transition-all duration-400"
-              name="mi:add"
-              x-bind:class="selected === 4 ? 'rotate-45' : ''"
-            />
-          </div>
-        </button>
-
-        <div
-          class="relative overflow-hidden transition-all max-h-0 duration-700"
-          style=""
-          x-ref="container4"
-          x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
-        >
-          <div class="p-6">
-            <ul class="list-disc list-inside text-white">
-              <li>
-                Our course is unique because it is the ONLY course delivered by
-                senior, practicing doctors within the NHS who have decades of
-                clinical and medical training experience, thus making them the
-                most qualified trainers by far!
-              </li>
-              <li>
-                We follow GMC's guidance on Good Medical Practice and pride
-                ourselves on our ethical practice.
-              </li>
-              <li>
-                We offer a keynote lecture by a former GMC PLAB EXAMINER who
-                will give you extremely valuable tips to be successful on the
-                day of your exam.
-              </li>
-              <li>
-                We offer you a UNIQUE 8 days of structured and supervised
-                PRACTICE SESSIONS under timed exam conditions.
-              </li>
-              <li>We do NOT teach or encourage scripts.</li>
-              <li>
-                We do NOT teach or obtain real GMC PLAB cases as we believe this
-                is very unethical and it puts candidates at a significant
-                disadvantage trying to predict cases that might be different.
-              </li>
-              <li>
-                Our mock exams are also conducted by the senior doctors to
-                ensure that you receive the correct guidance and feedback in
-                order to maximize your chances of success in the PLAB2 exam and
-                beyond.
-              </li>
-              <li>
-                You will get PERSONALISED feedback from a PLAB examiner on your
-                performance in the mock exams.
-              </li>
-              <li>
-                We will also have trained simulators as patients for the mock
-                exams, just like you will face in the PLAB2 exam so that you are
-                well prepared for this.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
+      </button>
+    </h2>
+    <div
+      id="accordion-collapse-body-4"
+      class="hidden"
+      aria-labelledby="accordion-collapse-heading-4"
+    >
+      <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">
+          We understand that coming to a new country is a big challenge.
+          Therefore, we believe in offering a one-stop solution to our
+          candidates. We offer affordable yet convenient and comfortable
+          accommodation within easy walking distance of our centre and all the
+          amenities within easy reach. The accommodation is only for our PLAB
+          students and separate for males and females. Please contact us for
+          more details.
+        </p>
+        <p class="text-gray-500 dark:text-gray-400">
+          Check out our guide and <a
+            href="/docs/getting-started/introduction/"
+            class="text-medbg dark:text-blue-500 hover:underline">Read more</a
+          >
+        </p>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Crash"
+title: "Crash Course"
 category: "Plab 2"
 price: "£595"
 snippet: "4-day course suitable for those who are looking for a refresher or further ensuresuccess in the exam."

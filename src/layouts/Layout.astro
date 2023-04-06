@@ -4,6 +4,7 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import Location from "@components/map/location.jsx";
 import "@fontsource/inter/variable.css";
+import Speeddial from "@components/speeddial.astro";
 
 export interface Props {
   title: string;
@@ -72,6 +73,7 @@ const makeTitle = title
     <Navbar />
     <slot />
     <Location client:visible />
+    <Speeddial />
     <Footer />
     <style is:global>
       /* Improve Page speed */
@@ -80,5 +82,6 @@ const makeTitle = title
         content-visibility: auto;
       }
     </style>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
   </body>
 </html>

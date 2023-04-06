@@ -29,6 +29,7 @@
     "astro-icon": "^0.8.0",
     "astro-navbar": "^1.1.5",
     "astro-seo": "^0.7.0",
+    "flowbite": "^1.6.4",
     "mapbox-gl": "^2.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
