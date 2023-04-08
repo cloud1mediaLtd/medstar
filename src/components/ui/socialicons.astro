@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+
+
+const social = [
+  {
+    name: "Facebook",
+    icon: "logos:facebook",
+    href: "https://www.facebook.com/profile.php?id=100089445867162",
+  },
+  {
+    name: "Instagram",
+    icon: "insta",
+    href: "https://www.instagram.com/medastra_courses/",
+  },
+  {
+    name: "Youtube",
+    icon: "logos:youtube-icon",
+    href: "https://www.youtube.com/@Medastra_Official",
+    },
+]
+---
+
+<div class="flex space-x-3 max-w-screen-xl mx-auto">
+    {
+      social.map((item) => (
+        <a href={item.href} target="_blank">
+          <Icon class="text-white h-6 space-x-4" name={item.icon} />
+        </a>
+      ))
+    }
+  </div>

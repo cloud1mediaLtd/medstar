@@ -15,7 +15,9 @@ import Link from "@components/ui/link.astro";
       <Fragment slot="desc">Here to help</Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16 items-center">
+    <div
+      class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16 items-center"
+    >
       <div class="">
         <h2 class="font-medium text-2xl text-gray-800">Contact Information</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
@@ -25,17 +27,18 @@ import Link from "@components/ui/link.astro";
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="ic:outline-location-on" />
             <span>552 Claremont Road Manchester M14 5XL</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="ic:baseline-chat" /><a
-              href="mailto:hello@astroshipstarter.com">info@medastra.co.uk</a
-            >
           </div>
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="ic:baseline-add-ic-call" /><a
-              href="tel:+447459236999">+44 7865 127757</a
-            >
+            <Icon class="text-gray-400 w-4 h-4" name="ic:baseline-chat" />
+            <a href="mailto:info@medastra.co.uk">info@medastra.co.uk</a>
+            
           </div>
-          
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon
+              class="text-gray-400 w-4 h-4"
+              name="ic:baseline-add-ic-call"
+            /><a href="tel:+447459236999">+44 7865 127757</a>
+          </div>
         </div>
       </div>
       <div>
