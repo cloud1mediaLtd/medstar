@@ -3,6 +3,8 @@ import { Icon } from "astro-icon";
 import Logos from "./logos.astro";
 import Socialicons from "./ui/socialicons.astro";
 
+import Socialicons from "./ui/socialicons.astro";
+
 
 const menuitems = [
   {
@@ -49,8 +51,8 @@ const menuitems = [
 ];
 ---
 
-<footer class="py-5 bg-slate-800">
-  <div class="flex py-5 justify-between max-w-screen-xl mx-auto">
+<footer class="pt-5 bg-slate-800">
+  <div class="md:flex px-5 md:px-0 py-5 justify-between max-w-screen-xl mx-auto">
     <div class="text-white flex content-center flex-wrap">
       <div class="space-y-6">
         <div class="flex items-center mt-2 space-x-2 text-white">
@@ -70,7 +72,7 @@ const menuitems = [
       </div>
     </div>
     <div>
-      <ul class="grid grid-cols-2 gap-2">
+      <ul class="grid grid-cols-2 gap-2 pt-5 md:pt-0  md:px-0">
         {
           menuitems.map((item, index) => (
             <li>
@@ -88,10 +90,10 @@ const menuitems = [
     </div>
   </div>
   <div
-    class="flex justify-between items-center py-5 max-w-screen-xl mx-auto border-t border-white/10"
+    class="flex justify-between  px-5 md:px-0 py-5 max-w-screen-xl mx-auto border-t border-white/10"
   >
     <div class="">
-      <p class="text-center text-xs text-slate-200 mt-1">
+      <p class="text-center text-xs text-slate-200 ">
         Hosted By <a
           href="https://cloud1media.com"
           target="_blank"
@@ -102,7 +104,7 @@ const menuitems = [
         </a>
       </p>
     </div>
-    <div class="text-center text-xs text-slate-200 mt-1">
+    <div class="text-center text-xs text-slate-200 ">
       All rights reserved © {new Date().getFullYear()}
     </div>
   </div>
