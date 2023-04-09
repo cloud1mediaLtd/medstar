@@ -2,50 +2,27 @@
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 import Strafield from "./strafield.astro";
-
+import Banner from "./ui/banner.astro";
 ---
 
-<main class="bg-black relative pt-24 pb-44 ">
-<Strafield /> 
-  <div class="flex items-center relative flex-col">
-    <h1
-      class="text-center md:text-start text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter text-white px-4"
-    >
-    MEDASTRA PLAB 2 Courses
-    </h1>
-    <h2
-      class="mt-5 text-center md:text-start text-md lg:text-xl font-semibold text-white px-5 md:px-0"
-    >
-      Join the BEST PLAB 2 Course taught by Senior Practicing NHS Doctors in Manchester
-    </h2>
-
-    <div
-      class="justify-center md:justify-start flex flex-col sm:flex-row gap-3 mt-5"
-    >
-      <div class="flex sm:flex-row gap-3">
-        <Link
-          size="lg"
-          style="inverted"
-          rel="noopener"
-          href="/courses"
-          class="flex gap-1 items-center justify-center"
-          target="_blank"
-        >
-          <Icon class="text-black w-4 h-4" name="zondicons:book-reference" />
-          Courses
-        </Link>
-        <Link
-          href="#"
-          href="/contact"
-          target="_blank"
-          class="flex gap-1 items-center justify-center"
-          rel="noopener"
-        >
-          <Icon class="text-white w-5 h-5" name="clarity:talk-bubbles-solid" />
-          Lets talk
-        </Link>
-        
-      </div>
+<main class="bg-black relative">
+  
+  <Strafield />
+  <div class="relative pt-28 pb-40">
+    <div class="flex items-center relative flex-col">
+      <h1
+        class="text-center md:text-start text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter text-white px-4"
+      >
+        MEDASTRA PLAB 2 Courses
+      </h1>
+      <h2
+        class="mt-5 text-center md:text-start text-md lg:text-xl font-semibold text-white px-5 md:px-0"
+      >
+        Join the BEST PLAB 2 Course taught by Senior Practicing NHS Doctors in
+        Manchester
+      </h2>
+      <div class=" md:flex justify-center z-50 hidden"><Banner /></div>
+      
     </div>
   </div>
 </main>
