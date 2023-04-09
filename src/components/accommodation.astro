@@ -55,13 +55,17 @@ const highlights = [
 
   <main>
     <div class="my-16">
+      
       <ul class="grid grid-cols-3 md:grid-cols-4 gap-4">
         {
           highlights.map((item) => (
             <li>
-              <div class="flex flex-col items-center mb-2">
-                <div class="flex bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4">
-                  <Icon class="text-white" name={item.icon} />
+              <div class="relative flex flex-col items-center mb-2">
+                <div class="absolute inline-flex  justify-center w-6 h-6 text-sm font-bold text-white bg-yellow-300 border-2 border-white rounded-full -top-2 right-3 dark:border-gray-900 ">?</div>
+                <div class=" bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4 ">
+                  
+                  <Icon class="text-white z" name={item.icon} />
+                  
                 </div>
 
                 <button
