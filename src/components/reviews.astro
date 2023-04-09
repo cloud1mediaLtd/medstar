@@ -2,18 +2,21 @@
 import { Icon } from "astro-icon";
 import Container from "./container.astro";
 import Sectionhead from "./sectionhead.astro";
+import Review from "./ui/review.astro";
 
 const review = [
   {
     name: "Dr Arsalan Naqvi",
     text: "Really thankful to Dr Sara Awan & Dr Tauqeer Abbas, Both extremely professional in teaching & guiding towards the right direction. Helping me underst& ways to get through different challenging questions. Dr Abbas has great experience being former Plab 2 examiner giving me great tips regarding history taking & efficient time management. & also advised not to use certain common mistakes that a c&idate repeatedly does. Dr Sara possess excellent communication skills & also taught me use holistic approach. Thanks for guiding me & helping me pass the exam in first attempt.",
-    rating: 5,
+    rating: [3],
+    date: "2021-05-01",
     icon: "subway:star",
   },
   {
     name: "Dr Shoaib Hasan",
     text: "Best ever combination of well versed and well experienced faculty including former PLAB examiners and practicing NHS senior doctors. They exactly know what is expected in exam and what is needed for a candidate to get through in first attempt. Teaching , Communication and hands on practice for skill station with excellent manikins available at best and most favourite location of Manchester with option of getting accommodation nearby. Highly recommended.",
-    rating: 5,
+    rating: [5],
+    date: "2021-05-01",
     icon: "subway:star",
   },
 ];
@@ -28,21 +31,13 @@ const review = [
 
 
 <div class="mt-4">
+  
   <ul class="grid md:grid-cols-2 gap-4">
     {
       review.map((item) => (
         <li>
-          <div class="flex flex-col bg-medbg text-white rounded-lg p-4 h-full">
-            <div class="flex mb-2">
-              <h1 class="font-bold pr-2">{item.name}</h1>
-              <Icon class="text-white h-4 pr-1" name={item.icon} />
-              <Icon class="text-white h-4 pr-1" name={item.icon} />
-              <Icon class="text-white h-4 pr-1" name={item.icon} />
-              <Icon class="text-white h-4 pr-1" name={item.icon} />
-              <Icon class="text-white h-4 pr-1" name={item.icon} />
-            </div>
-
-            <p class="text-sm h-full">{item.text}</p>
+          <div class="flex flex-col bg-gray-100 text-white rounded-lg p-4 h-full">
+            <Review name={item.name} text={item.text} rating={item.rating} date={item.date} />
           </div>
         </li>
       ))
