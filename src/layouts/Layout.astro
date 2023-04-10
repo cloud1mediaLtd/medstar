@@ -69,13 +69,13 @@ const makeTitle = title
       }}
     />
   </head>
-  <body>
+  <body class="dark:bg-slate-900 bg-white">
     <Navbar />
     <slot />
     <Location client:visible />
-    <div class="relative" id="speed-dial">
+
     <Speeddial />
-  </div>
+
     <Footer />
     <style is:global>
       /* Improve Page speed */
@@ -88,16 +88,3 @@ const makeTitle = title
   </body>
 </html>
 
-<script>
-
-  const speedDial = document.getElementById('speed-dial');
-  
-  // Hide the speed dial element initially
-  speedDial.style.display = 'none';
-  
-  // Set a timeout to show the speed dial after 2 seconds
-  setTimeout(() => {
-    speedDial.style.display = 'block';
-  }, 5000);
-  
-  </script>

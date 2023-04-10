@@ -15,5 +15,5 @@ module.exports = {
   plugins: [require("@tailwindcss/typography"), "@tailwindcss/aspect-ratio",
   require('flowbite/plugin'),
 ],
-  
+darkMode: 'class',
 };
