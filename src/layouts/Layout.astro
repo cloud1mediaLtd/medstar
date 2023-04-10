@@ -73,7 +73,9 @@ const makeTitle = title
     <Navbar />
     <slot />
     <Location client:visible />
+    <div class="relative" id="speed-dial">
     <Speeddial />
+  </div>
     <Footer />
     <style is:global>
       /* Improve Page speed */
@@ -85,3 +87,17 @@ const makeTitle = title
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
   </body>
 </html>
+
+<script>
+
+  const speedDial = document.getElementById('speed-dial');
+  
+  // Hide the speed dial element initially
+  speedDial.style.display = 'none';
+  
+  // Set a timeout to show the speed dial after 2 seconds
+  setTimeout(() => {
+    speedDial.style.display = 'block';
+  }, 5000);
+  
+  </script>
