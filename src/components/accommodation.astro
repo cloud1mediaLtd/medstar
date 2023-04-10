@@ -59,56 +59,60 @@ const highlights = [
         {
           highlights.map((item) => (
             <li>
-              <div class="relative flex flex-col items-center mb-2">
-                
-                <div class=" bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4 ">
-                  <Icon class="text-white z" name={item.icon} />
-                </div>
-
-                <button
-                  data-popover-target={item.name}
-                  data-popover-placement="bottom-end"
-                  type="button"
-                  class="flex"
-                >
-                  <>
-                    <div class="absolute inline-flex  justify-center w-6 h-6 text-sm font-bold text-white bg-yellow-300 border-2 border-white rounded-full -top-2 right-3 md:right-[105px] dark:border-gray-900 ">
-                      ?
-                    </div>
-                    <span class="sr-only">Show information</span>
-                  </>
-                </button>
-                <div
-                  data-popover
-                  id={item.name}
-                  role="tooltip"
-                  class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400"
-                >
-                  <div class="p-3 space-y-2">
-                    <p>{item.desc}</p>
-                    <a
-                      href="#"
-                      class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700"
-                    >
-                      Book{" "}
-                      <svg
-                        class="w-4 h-4 ml-1"
-                        aria-hidden="true"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
+              <div class="">
+                <div class=" flex flex-col items-center mb-2">
+                  <div class="relative">
+                  <div class=" bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4 ">
+                    <Icon class="text-white z" name={item.icon} />
                   </div>
-                  <div data-popper-arrow />
+
+                  <button
+                    data-popover-target={item.name}
+                    data-popover-placement="bottom-end"
+                    type="button"
+                    class="flex"
+                  >
+                    <>
+                      <div class="absolute inline-flex  justify-center w-6 h-6 text-sm font-bold text-white bg-yellow-300 border-2 border-white rounded-full -top-2 -right-2 md:-right-[10px] dark:border-gray-900 ">
+                        ?
+                      </div>
+                      <span class="sr-only">Show information</span>
+                    </>
+                  </button>
                 </div>
-                <div>{item.name}</div>
+                  
+                  <div
+                    data-popover
+                    id={item.name}
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400"
+                  >
+                    <div class="p-3 space-y-2">
+                      <p>{item.desc}</p>
+                      <a
+                        href="#"
+                        class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700"
+                      >
+                        Book{" "}
+                        <svg
+                          class="w-4 h-4 ml-1"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div data-popper-arrow />
+                  </div>
+                  <div>{item.name}</div>
+                </div>
               </div>
             </li>
           ))
