@@ -6,22 +6,41 @@ import Banner from "./ui/banner.astro";
 ---
 
 <main class="bg-black relative">
-  
   <Strafield />
-  <div class="relative pt-28 pb-44">
+  <div class="md:flex justify-center z-50 hidden"><Banner /></div>
+  <div class="relative pt-28 pb-40 md:pb-36">
+    
+
     <div class="flex items-center relative flex-col">
+      
       <h1
-        class="text-center md:text-start text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter text-white px-4"
+      class="mb-4 text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-white"
+    >
+    MEDASTRA PLAB 2 Courses
+    </h1>
+    <p
+      class="mb-6 max-w-7xl text-center text-lg font-normal text-gray-100 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-100"
+    >
+    Worried about passing your PLAB 2 exam?, which course to take?,
+    where to stay?, how to get a good job in the UK?... We have the answers to all your questions.
+    </p>
+    <a
+      href="/about"
+      class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-white bg-medbg rounded-lg hover:bg-slate-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+    >
+      Learn more
+      <svg
+        class="w-5 h-5 ml-2 -mr-1"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          fill-rule="evenodd"
+          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path></svg
       >
-        MEDASTRA PLAB 2 Courses
-      </h1>
-      <h2
-        class="mt-5 text-center md:text-start text-md lg:text-xl font-semibold text-white px-5 md:px-0"
-      >
-        Join the BEST PLAB 2 Course taught by Senior Practicing NHS Doctors in
-        Manchester
-      </h2>
-      <div class=" md:flex justify-center z-50 hidden"><Banner /></div>
+    </a>
+
       
     </div>
   </div>

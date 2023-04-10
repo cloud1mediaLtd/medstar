@@ -55,17 +55,14 @@ const highlights = [
 
   <main>
     <div class="my-16">
-      
       <ul class="grid grid-cols-3 md:grid-cols-4 gap-4">
         {
           highlights.map((item) => (
             <li>
               <div class="relative flex flex-col items-center mb-2">
-                <div class="absolute inline-flex  justify-center w-6 h-6 text-sm font-bold text-white bg-yellow-300 border-2 border-white rounded-full -top-2 right-3 dark:border-gray-900 ">?</div>
+                
                 <div class=" bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4 ">
-                  
                   <Icon class="text-white z" name={item.icon} />
-                  
                 </div>
 
                 <button
@@ -74,21 +71,10 @@ const highlights = [
                   type="button"
                   class="flex"
                 >
-                  <h1 class="text-center font-bold">{item.name}</h1>
                   <>
-                    <svg
-                      class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
+                    <div class="absolute inline-flex  justify-center w-6 h-6 text-sm font-bold text-white bg-yellow-300 border-2 border-white rounded-full -top-2 right-3 md:right-[105px] dark:border-gray-900 ">
+                      ?
+                    </div>
                     <span class="sr-only">Show information</span>
                   </>
                 </button>
@@ -122,6 +108,7 @@ const highlights = [
                   </div>
                   <div data-popper-arrow />
                 </div>
+                <div>{item.name}</div>
               </div>
             </li>
           ))
