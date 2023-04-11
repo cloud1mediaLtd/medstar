@@ -1,13 +1,11 @@
 ---
-
 import Aboutsection from "@components/aboutsection.astro";
 import Accommodation from "@components/accommodation.astro";
 import Accordian from "@components/accordian.astro";
 import Beyondservices from "@components/beyondservices.astro";
 import Container from "@components/container.astro";
 import Courseindexcontainer from "@components/courseindexcontainer.astro";
-import Features from "@components/features.astro";
-import Hero from "@components/hero.astro";
+import Hero from "@components/hero/hero.astro";
 import Jumbo from "@components/jumbo.astro";
 import Mainservices from "@components/mainservices.astro";
 import Reviews from "@components/reviews.astro";
@@ -17,18 +15,15 @@ import Layout from "@layouts/Layout.astro";
 <Layout title="">
   <Hero />
   <Container>
-    <Features />
+    <!--  <div class="relative z-20 -mt-32 md:-mt-12 ">
+      <Features />
+    </div>
+    -->
+
     <Aboutsection />
     <Jumbo />
 
-    
-    <Courseindexcontainer>
-      <Mainservices />
-      <Beyondservices />
-    </Courseindexcontainer>
-
     <Accordian />
-  <Reviews />
+    <Reviews />
   </Container>
 </Layout>
-

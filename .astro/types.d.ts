@@ -90,9 +90,9 @@ declare module 'astro:content' {
   collection: "beyond",
   data: InferEntrySchema<"beyond">
 },
-"cvchecki.md": {
-  id: "cvchecki.md",
-  slug: "cvchecki",
+"cvcheck.md": {
+  id: "cvcheck.md",
+  slug: "cvcheck",
   body: string,
   collection: "beyond",
   data: InferEntrySchema<"beyond">

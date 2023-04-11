@@ -1,8 +1,7 @@
 ---
-import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
+
 import Strafield from "./strafield.astro";
-import Banner from "./ui/banner.astro";
+import Features from "./features.astro";
 
 // <div class="md:flex justify-center z-50 hidden"><Banner /></div>
 ---
@@ -10,10 +9,10 @@ import Banner from "./ui/banner.astro";
 <main class="bg-black relative">
   <Strafield />
    
-  <div class="relative pt-28 pb-40 md:pb-36">
+  <div class="relative">
     
 
-    <div class="flex items-center relative flex-col">
+    <div class="flex items-center relative flex-col py-28">
       
       <h1
       class="mb-4 text-center text-2xl font-bold md:text-3xl lg:text-4xl text-white"
@@ -21,12 +20,17 @@ import Banner from "./ui/banner.astro";
     MEDASTRA PLAB 2 Courses
     </h1>
     <p
-      class="mb-6 max-w-7xl text-center text-lg font-normal text-gray-100 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+      class="max-w-7xl text-center text-lg font-normal text-gray-100 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
     >
     Join the BEST PLAB 2 Course taught by Senior Practicing NHS Doctors
     </p>
-    
-      
+    <!--
+    <div class="max-w-7xl">
+      <Features /> 
     </div>
+    -->
+    
+    </div>
+    
   </div>
 </main>
