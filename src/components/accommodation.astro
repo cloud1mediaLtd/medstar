@@ -17,18 +17,14 @@ const highlights = [
   {
     name: "Services Included",
     icon: "fluent:emoji-sparkle-48-filled",
-    desc: "Cleaning service included",
+    desc: "Cleaning service included, Super fast wifi included",
   },
   {
     name: "Excellent Accommodation",
     icon: "subway:star",
     desc: "Excellent accommodation for PLAB 2 doctors",
   },
-  {
-    name: "Wifi",
-    icon: "fluent:wifi-1-20-filled",
-    desc: "Super fast wifi included",
-  },
+ 
   {
     name: "Affordable Rates",
     icon: "fluent:document-ribbon-28-filled",
@@ -39,31 +35,21 @@ const highlights = [
     icon: "fluent:document-text-extract-20-filled",
     desc: "Bills included",
   },
-  {
-    name: "Prime Location",
-    icon: "fluent:my-location-12-regular",
-    desc: "Located on Curry Mile, 5 minutes walk from course premises",
-  },
 ];
 ---
 
-<Container>
-  <Sectionhead align="center">
-    <Fragment slot="title">Accommodation</Fragment>
-    <Fragment slot="desc">Best Location in Manchester</Fragment>
-  </Sectionhead>
 
   <main>
-    <div class="my-16">
-      <ul class="grid grid-cols-3 md:grid-cols-4 gap-4">
+    <div class="my-4">
+      <ul class="grid grid-cols-3 md:grid-cols-6 gap-4">
         {
           highlights.map((item) => (
             <li>
               <div class="">
                 <div class=" flex flex-col items-center mb-2">
                   <div class="relative">
-                  <div class=" bg-medbg rounded-full p-3 w-14 h-14 shrink-0 mb-4 ">
-                    <Icon class="text-white z" name={item.icon} />
+                  <div class=" bg-medbg dark:bg-medbgdark rounded-full p-2 w-12 h-12 shrink-0 mb-4 ">
+                    <Icon class="text-white" name={item.icon} />
                   </div>
 
                   <button
@@ -111,7 +97,7 @@ const highlights = [
                     </div>
                     <div data-popper-arrow />
                   </div>
-                  <div>{item.name}</div>
+                  <div class="text-gray-500 dark:text-gray-400 text-center text-sm">{item.name}</div>
                 </div>
               </div>
             </li>

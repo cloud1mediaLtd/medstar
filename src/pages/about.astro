@@ -7,72 +7,332 @@ import Button from "@components/ui/button.astro";
 import Contactform from "@components/contactform.astro";
 import Link from "@components/ui/link.astro";
 import Features from "@components/features.astro";
+import Aboutsection from "@components/aboutsection.astro";
+import Accommodation from "@components/accommodation.astro";
 ---
 
 <Layout title="About Medastra">
   <Container>
     <main>
       <div class="my-20">
-        <div class="my-12">
-          <h1
-            class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
-          >
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-medbg to-emerald-800"
-              >Medastra</span
-            > Here for you.
-          </h1>
-          <p
-            class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"
-          >
-            Are you worried about passing your PLAB exam?, Confused which course
-            provider to join?, Where to stay in Manchester?, Wondering how to
-            get a good job in the UK?
-          </p>
-        </div>
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-        <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <Aboutsection />
+        <!-- Section -->
+        <div class="">
           <div>
-            <h2 class="text-4xl font-extrabold dark:text-white">Who we are</h2>
-            <p class="my-4 text-lg text-gray-500">
-              At Medastra we completely understand how stressed you might be
-              feeling as you plan your journey to becoming a successful doctor
-              in the UK. We are here to guide you through each part of the
-              process, from the time you arrive in the UK, through your PLAB 2
-              preparation, to your first job in the NHS.
-            </p>
-            <p class="text-gray-500 dark:text-gray-400">
-              We pride ourselves on our integrity and ethical approach, both
-              professionally and personally. We echo this sentiment throughout
-              our course provision.
-            </p>
+            <h2 class="text-4xl font-extrabold dark:text-white pb-8">
+              Supervised and Structured Practice Sessions
+            </h2>
 
-            <a
-              href="/courses"
-              class="inline-flex items-center text-lg text-blue-600 dark:text-blue-500 hover:underline"
-            >
-              View Course
-              <svg
-                class="w-6 h-6 ml-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clip-rule="evenodd"></path></svg
-              >
-            </a>
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+              <div class="col-span-3">
+                <ul
+                  class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400"
+                >
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >You will be grouped with candidates with an exam date
+                      close to yours, and you will get the chance to formally
+                      PRACTISE OVER 150 scenarios under timed exam conditions.
+                    </span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span>
+                      You get to practice all the COMMON, IIMPORTANT, DIFFICULT,
+                      and ANTICIPATED scenarios.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >You will get to practice with several different people
+                      and will be able to learn from their strengths and
+                      weaknesses.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >You will also get feedback from different people in your group and trainers.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >Boost your knowledge, experience, consultation skills and confidence.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div></div>
+            </div>
+            <div></div>
           </div>
-          <div>
-            <div class="">
+          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+        </div>
+
+        <!-- Section -->
+        <div class="">
+          <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+            <div class="col-span-3">
+              <h2 class="text-4xl font-extrabold dark:text-white pb-8">
+                Senior and Experienced Faculty
+              </h2>
+
+              <div class="">
+                <ul
+                  class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400"
+                >
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >Behind MEDASTRA is a team of senior NHS doctors that
+                      want YOU to benefit from decades of VAST EXPERIENCE.
+                    </span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >All trainers are currently practicing at
+                      a senior level in the UK and UP-TO-DATE with the latest
+                      guidelines and practical aspects of working in the NHS with the skills and experience to properly prepare you for your exam and future career.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >The team behind MEDASTRA have a broad range of interests and cover several fields of medicine, giving you a
+                      broad range of EXPERTISE.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >PASSIONATE TEACHERS with a desire to help and guide other international medical
+                      graduates achieve the level of SUCCESS that they have
+                      achieved and become successful Doctors in the UK like them.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >Trainers that value their INTEGRITY and ETHICAL PRACTICE,
+                      acting on GMC's Guide to Good Medical Practice. Allowing them to Enjoy
+                      great respect both professionally and personally and strongly encourage and advise doctors coming to the
+                      UK to uphold these ethical values.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >Our PLAB 2 courses that SUIT YOUR NEEDS, CV
+                      writing and interview preparation, clinical skills
+                      assessment and NHS orientation.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >We also include an understanding about LIFE IN THE UK
+                      session, so that you can begin your career as a doctor in
+                      the UK with CONFIDENCE and EASE.</span
+                    >
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path></svg
+                    >
+                    <span
+                      >Trainers that will make learning and preparing for the PLAB 2
+                      exam an ENJOYABLE EXPERIENCE, so that you feel confident
+                      and stress free taking the exam.</span
+                    >
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div></div>
+          </div>
+          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+        </div>
+        <!-- Section -->
+        <div class="">
+          <h2 class="text-4xl font-extrabold dark:text-white pb-4">
+            A Great Location
+          </h2>
+          <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+            <div>
+              <div class="">
+                <p class="text-gray-500 dark:text-gray-400 pb-4">
+                  You could not ask for a better location, The GMC exam building
+                  is only a short distance away and you can easily visit before
+                  your exam day to familiarise yourself with the surroundings
+                  and location. <br />
+                  <br />
+                  We are ideally situated on the world-famous ‘Curry Mile’ - Manchester!,
+                  Wherever in the world you are coming from, you will not struggle
+                  to meet people and find cuisine from your region! and at our doorsteps
+                  you will find:
+                </p>
+                <Accommodation />
+              </div>
+            </div>
+            <div>
               <ul
                 class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400"
               >
                 <li class="flex items-center space-x-3">
                   <!-- Icon -->
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path></svg
+                  >
+                  <span>
+                    Restaurants, cafes and food stalls, offering multi-cultural
+                    cuisine including Halal and vegetarian food.</span
+                  >
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -82,28 +342,32 @@ import Features from "@components/features.astro";
                       clip-rule="evenodd"></path></svg
                   >
                   <span
-                    >Senior and experienced GPs and Hospital doctors experienced
-                    in training junior doctors
+                    >International supermarkets and grocery stores religious and
+                    cultural centres, catering to people of different faiths and
+                    ethnicities.</span
+                  >
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path></svg
+                  >
+                  <span
+                    >Religious and cultural centres, catering to people of
+                    different faiths and ethnicities.
                   </span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <!-- Icon -->
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span> NHS Consultants and Clinical Directors</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,14 +377,13 @@ import Features from "@components/features.astro";
                       clip-rule="evenodd"></path></svg
                   >
                   <span
-                    >We have first-hand experience of going through this journey
-                    ourselves and fully understand the challenges involved.</span
+                    >Affordable accommodation for students and professionals.</span
                   >
                 </li>
                 <li class="flex items-center space-x-3">
                   <!-- Icon -->
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -130,39 +393,27 @@ import Features from "@components/features.astro";
                       clip-rule="evenodd"></path></svg
                   >
                   <span
-                    >Benefit from our faculty's experience as PLAB examiners for
-                    the GMC, giving you valuable tips to ace the PLAB2 exam.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Excellent role players for our mock exams to give you the
-                    same experience as you will have with the simulators in the
-                    real exam.</span
+                    >Convenient transport links to the rest of the city and much
+                    more...</span
                   >
                 </li>
               </ul>
             </div>
+            <div>
+              <p class="my-4 text-lg text-gray-400"></p>
+            </div>
+            
           </div>
+          
+          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         </div>
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+        <!-- Section -->
         <div class="my-8">
-          <h2 class="font-bold mb-4">What we offer</h2>
-          <p>
+          <h2 class="font-bold mb-4 text-gray-400">What we offer</h2>
+          <p class="text-gray-400">
             We do not just provide PLAB2 courses; our support extends well
             beyond this.<br />
-            <ul class="list-disc">
+            <ul class="list-disc text-gray-400">
               <li>
                 excellent accommodation in the heart of Manchester close to the
                 course and GMC

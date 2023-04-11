@@ -9,6 +9,8 @@ module.exports = {
       },
       colors: {
         medbg: "#1A6C79",
+        medbglight: "#2494a6",
+        medbgdark: "#165c67",
       },
     },
   },

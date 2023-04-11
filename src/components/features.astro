@@ -25,7 +25,10 @@ const aboutfeature = [
 
 ---
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 -mt-32 md:-mt-12 gap-8 md:gap-8 bg-white relative rounded-md p-4 shadow-md z-20">
+
+  
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 -mt-32 md:-mt-12 gap-8 md:gap-8 bg-gray-50 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 relative rounded-md p-4 shadow-md z-20">
   {
     aboutfeature.map((item) => (
       
@@ -34,8 +37,8 @@ const aboutfeature = [
               <Icon class="text-white" name={item.icon} />
             </div>
             <div>
-              <a href={}><h3 class="font-bold text-md">{item.title}</h3></a>
-              <p class="text-slate-500 mt-0 leading-tight text-sm font-semibold">{item.snippet}</p>
+              <a href={}><h3 class="font-bold text-md dark:text-white">{item.title}</h3></a>
+              <p class="text-slate-500 mt-0 leading-tight text-sm font-semibold dark:text-gray-400">{item.snippet}</p>
             </div>
           </div>
      
