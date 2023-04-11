@@ -2,19 +2,15 @@
 import { Icon } from "astro-icon";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Button from "@components/ui/button.astro";
-import Contactform from "@components/contactform.astro";
-import Link from "@components/ui/link.astro";
-import Features from "@components/features.astro";
 import Aboutsection from "@components/aboutsection.astro";
-import Accommodation from "@components/accommodation.astro";
+import Accommodationsection from "@components/accommodationsection.astro";
+
 ---
 
 <Layout title="About Medastra">
   <Container>
     <main>
-      <div class="my-20">
+      <div class="">
         <Aboutsection />
         <!-- Section -->
         <div class="">
@@ -287,126 +283,7 @@ import Accommodation from "@components/accommodation.astro";
           <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         </div>
         <!-- Section -->
-        <div class="">
-          <h2 class="text-4xl font-extrabold dark:text-white pb-4">
-            A Great Location
-          </h2>
-          <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-            <div>
-              <div class="">
-                <p class="text-gray-500 dark:text-gray-400 pb-4">
-                  We are ideally situated on the world-famous ‘Curry Mile’ - Manchester! You could not ask for a better location, The GMC exam building
-                  is only a short distance away and you can easily visit before
-                  your exam day to familiarise yourself with the surroundings
-                  and location. <br>
-                  <br>
-                  A vibrent multi-cultural area so Wherever in the world you are coming from, you will not struggle
-                  to meet people and find cuisine from your region!, at our doorsteps
-                  you will find:
-                  <br />
-                </p>
-                
-              </div>
-            </div>
-            <div>
-              <ul
-                class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400"
-              >
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span>
-                    Restaurants, cafes and food stalls, offering multi-cultural
-                    cuisine including Halal and vegetarian food.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >International supermarkets and grocery stores religious and
-                    cultural centres, catering to people of different faiths and
-                    ethnicities.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Religious and cultural centres, catering to people of
-                    different faiths and ethnicities.
-                  </span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Our own and other affordable accommodation for students and professionals.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Convenient transport links to the rest of the city and much
-                    more...</span
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p class="my-4 text-lg text-gray-400"></p>
-            </div>
-            
-          </div>
-          
-          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-        </div>
+        <Accommodationsection / >
         <!-- Section -->
         <div class="my-8">
           <h2 class="font-bold mb-4 text-gray-400">What we offer</h2>

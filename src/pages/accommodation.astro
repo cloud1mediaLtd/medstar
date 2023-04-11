@@ -1,12 +1,19 @@
 ---
-import Accommodation from "@components/accommodation.astro";
+
+import Accommodationsection from "@components/accommodationsection.astro";
+import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
 
 ---
 
 <Layout title="Accommodation">
-    <div class="static">
-        <Accommodation />
+    <Container>
+        <div class="my-16">
+        <Accommodationsection />
     </div>
+</Container>
+
+
+
 
 </Layout>
