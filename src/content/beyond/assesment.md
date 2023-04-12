@@ -5,7 +5,7 @@ category: "Beyond Plab 2"
 price: "£15"
 snippet: "We will individually review your CV or application form and suggest improvements."
 image: {
-    src: "../skills.png",
+    src: "/skills.png",
     alt: "full stack web development"
 }
 order: 1

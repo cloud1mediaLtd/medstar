@@ -5,7 +5,7 @@ category: "Plab 2"
 price: "£595"
 snippet: "4-day course suitable for those who are looking for a refresher or further ensuresuccess in the exam."
 image: {
-    src: "../crash.png",
+    src: "/crash.png",
     alt: "full stack web development"
 }
 order: 2
