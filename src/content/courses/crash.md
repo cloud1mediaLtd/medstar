@@ -5,7 +5,7 @@ category: "Plab 2"
 price: "£595"
 snippet: "4-day course suitable for those who are looking for a refresher or further ensuresuccess in the exam."
 image: {
-    src: "https://www.nutraingredients-asia.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/publications/food-beverage-nutrition/nutraingredients-asia.com/news/regulation-policy/south-korea-to-update-regulations-to-support-customised-nutrition-industry/16012982-2-eng-GB/South-Korea-to-update-regulations-to-support-customised-nutrition-industry.jpg",
+    src: "../crash.png",
     alt: "full stack web development"
 }
 order: 2

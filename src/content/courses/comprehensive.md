@@ -5,7 +5,7 @@ category: "Plab 2"
 price: "£595"
 snippet: "This is our most detailed course, providing everything you need to sail through the PLAB 2 exam."
 image: {
-    src: "https://static.wixstatic.com/media/77f5caab3f7d42d0ba0e174c88d9eac7.jpg/v1/fill/w_870,h_576,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Doctor%20and%20Patient.jpg",
+    src: "../comp.png",
     alt: "full stack web development"
 }
 order: 3

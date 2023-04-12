@@ -5,7 +5,7 @@ category: "Beyond Plab 2"
 price: "£15"
 snippet: "We will individually review your CV or application form and suggest improvements."
 image: {
-    src: "https://media.licdn.com/dms/image/C4E12AQF3241QcyXWcg/article-cover_image-shrink_600_2000/0/1520126955006?e=2147483647&v=beta&t=igUhTSM0-UYZ2dzmsfKQJm07HUSxMawjBN0KHq9YJ5U",
+    src: "../skills.png",
     alt: "full stack web development"
 }
 order: 1

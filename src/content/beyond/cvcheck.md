@@ -5,7 +5,7 @@ category: "Beyond Plab 2"
 price: "£15"
 snippet: "A good CV or application entry is the key to getting shortlisted for a job."
 image: {
-    src: "https://johnacademy.co.uk/wp-content/uploads/2017/07/J10-CV-WRITING-AND-INTERVIEW-SKILL-COURSE.jpg",
+    src: "../cvwriting.png",
     alt: "CV Checking Service"
 }
 order: 1
