@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
+      scale: {
+        '-100': '-1',
+    },
       colors: {
         medbg: "#1A6C79",
         medbglight: "#2494a6",

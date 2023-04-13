@@ -6,6 +6,9 @@ import Location from "@components/map/location.jsx";
 import "@fontsource/inter/variable.css";
 import Speeddial from "@components/speeddial.astro";
 
+import Accordian from "@components/accordian.astro";
+import Container from "@components/container.astro";
+
 export interface Props {
   title: string;
 }
@@ -80,6 +83,10 @@ const makeTitle = title
   <body class="dark:bg-slate-900 bg-slate-50">
     <Navbar />
     <slot />
+    <Container>
+      <Accordian />
+    </Container>
+    
     <Location client:visible />
 
     <Speeddial />

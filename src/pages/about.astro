@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Aboutsection from "@components/aboutsection.astro";
 import Accommodationsection from "@components/accommodationsection.astro";
-
+import { Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="About Medastra">
@@ -12,15 +12,17 @@ import Accommodationsection from "@components/accommodationsection.astro";
     <main>
       <div class="">
         <Aboutsection />
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         <!-- Section -->
         <div class="">
           <div>
-            <h2 class="text-4xl font-extrabold dark:text-white pb-8">
-              Supervised and Structured Practice Sessions
-            </h2>
-
-            <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
-              <div class="col-span-3">
+            <div class="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-4">
+              <div class="md:col-span-3">
+                <h2
+                  class="text-4xl font-extrabold dark:text-white pb-8 text-center md:text-start"
+                >
+                  Supervised and Structured Practice Sessions
+                </h2>
                 <ul
                   class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400"
                 >
@@ -90,7 +92,8 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >You will also get feedback from different people in your group and trainers.</span
+                      >You will also get feedback from different people in your
+                      group and trainers.</span
                     >
                   </li>
                   <li class="flex items-center space-x-3">
@@ -106,14 +109,19 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >Boost your knowledge, experience, consultation skills and confidence.</span
+                      >Boost your knowledge, experience, consultation skills and
+                      confidence.</span
                     >
                   </li>
                 </ul>
               </div>
-              <div></div>
+
+              <div
+                class="bg-cover bg-center rounded-md h-auto max-w-full min-h-[175px] -scale-x-100"
+                style="background-image: url(/communicate.png)"
+               />
+
             </div>
-            <div></div>
           </div>
           <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         </div>
@@ -143,8 +151,8 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >Behind MEDASTRA is a team of senior NHS doctors that
-                      want YOU to benefit from decades of VAST EXPERIENCE.
+                      >Behind MEDASTRA is a team of senior NHS doctors that want
+                      YOU to benefit from decades of VAST EXPERIENCE.
                     </span>
                   </li>
                   <li class="flex items-center space-x-3">
@@ -160,9 +168,11 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >All trainers are currently practicing at
-                      a senior level in the UK and UP-TO-DATE with the latest
-                      guidelines and practical aspects of working in the NHS with the skills and experience to properly prepare you for your exam and future career.</span
+                      >All trainers are currently practicing at a senior level
+                      in the UK and UP-TO-DATE with the latest guidelines and
+                      practical aspects of working in the NHS with the skills
+                      and experience to properly prepare you for your exam and
+                      future career.</span
                     >
                   </li>
                   <li class="flex items-center space-x-3">
@@ -178,8 +188,9 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >The team behind MEDASTRA have a broad range of interests and cover several fields of medicine, giving you a
-                      broad range of EXPERTISE.</span
+                      >The team behind MEDASTRA have a broad range of interests
+                      and cover several fields of medicine, giving you a broad
+                      range of EXPERTISE.</span
                     >
                   </li>
                   <li class="flex items-center space-x-3">
@@ -195,9 +206,10 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >PASSIONATE TEACHERS with a desire to help and guide other international medical
-                      graduates achieve the level of SUCCESS that they have
-                      achieved and become successful Doctors in the UK like them.</span
+                      >PASSIONATE TEACHERS with a desire to help and guide other
+                      international medical graduates achieve the level of
+                      SUCCESS that they have achieved and become successful
+                      Doctors in the UK like them.</span
                     >
                   </li>
                   <li class="flex items-center space-x-3">
@@ -214,9 +226,10 @@ import Accommodationsection from "@components/accommodationsection.astro";
                     >
                     <span
                       >Trainers that value their INTEGRITY and ETHICAL PRACTICE,
-                      acting on GMC's Guide to Good Medical Practice. Allowing them to Enjoy
-                      great respect both professionally and personally and strongly encourage and advise doctors coming to the
-                      UK to uphold these ethical values.</span
+                      acting on GMC's Guide to Good Medical Practice. Allowing
+                      them to Enjoy great respect both professionally and
+                      personally and strongly encourage and advise doctors
+                      coming to the UK to uphold these ethical values.</span
                     >
                   </li>
                   <li class="flex items-center space-x-3">
@@ -232,9 +245,9 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >Our PLAB 2 courses that SUIT YOUR NEEDS, CV
-                      writing and interview preparation, clinical skills
-                      assessment and NHS orientation.</span
+                      >Our PLAB 2 courses that SUIT YOUR NEEDS, CV writing and
+                      interview preparation, clinical skills assessment and NHS
+                      orientation.</span
                     >
                   </li>
                   <li class="flex items-center space-x-3">
@@ -268,54 +281,57 @@ import Accommodationsection from "@components/accommodationsection.astro";
                         clip-rule="evenodd"></path></svg
                     >
                     <span
-                      >Trainers that will make learning and preparing for the PLAB 2
-                      exam an ENJOYABLE EXPERIENCE, so that you feel confident
-                      and stress free taking the exam.</span
+                      >Trainers that will make learning and preparing for the
+                      PLAB 2 exam an ENJOYABLE EXPERIENCE, so that you feel
+                      confident and stress free taking the exam.</span
                     >
                   </li>
-                  
                 </ul>
               </div>
             </div>
-
-            <div></div>
+            <div
+            class="bg-cover bg-[-600px] rounded-md h-auto max-w-full min-h-[175px] -scale-x-100"
+            style="background-image: url(/skills.png)"
+           />
           </div>
+
           <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         </div>
         <!-- Section -->
-        <Accommodationsection / >
-        <!-- Section -->
-        <div class="my-8">
-          <h2 class="font-bold mb-4 text-gray-400">What we offer</h2>
-          <p class="text-gray-400">
-            We do not just provide PLAB2 courses; our support extends well
-            beyond this.<br />
-            <ul class="list-disc text-gray-400">
-              <li>
-                excellent accommodation in the heart of Manchester close to the
-                course and GMC
-              </li>
-              <li>
-                comprehensive PLAB 2 preparation through our carefully tailored
-                courses
-              </li>
-              <li>
-                additional opportunity to practice through our structured and
-                supervised practice sessions
-              </li>
-              <li>CV writing and interview preparation courses</li>
-              <li>clinical skills assessment course</li>
-              <li>NHS orientation and life in the UK sessions</li>
-              <li>
-                help with arranging your clinical attachments and first job
-              </li>
-              <li>
-                help with your visa and immigration matters through our legal
-                contacts
-              </li>
-            </ul>
-          </p>
-        </div>
+        <Accommodationsection>
+          <!-- Section -->
+          <div class="my-8">
+            <h2 class="font-bold mb-4 text-gray-400">What we offer</h2>
+            <p class="text-gray-400">
+              We do not just provide PLAB2 courses; our support extends well
+              beyond this.<br />
+              <ul class="list-disc text-gray-400">
+                <li>
+                  excellent accommodation in the heart of Manchester close to
+                  the course and GMC
+                </li>
+                <li>
+                  comprehensive PLAB 2 preparation through our carefully
+                  tailored courses
+                </li>
+                <li>
+                  additional opportunity to practice through our structured and
+                  supervised practice sessions
+                </li>
+                <li>CV writing and interview preparation courses</li>
+                <li>clinical skills assessment course</li>
+                <li>NHS orientation and life in the UK sessions</li>
+                <li>
+                  help with arranging your clinical attachments and first job
+                </li>
+                <li>
+                  help with your visa and immigration matters through our legal
+                  contacts
+                </li>
+              </ul>
+            </p>
+          </div>
+        </Accommodationsection>
       </div>
     </main>
   </Container>

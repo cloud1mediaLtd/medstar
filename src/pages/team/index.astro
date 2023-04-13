@@ -19,7 +19,7 @@ const publishedTeamMembers = await getCollection("team");
       </Fragment>
     </Sectionhead>
     <div class="py-20">
-      <ul class="grid grid-cols-3 gap-4">
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {
           publishedTeamMembers.map((teamMemberEntry, index) => (
             <div class="">
@@ -49,10 +49,7 @@ const publishedTeamMembers = await getCollection("team");
                     </h3>
                     <div class="space-x-1">
                       {teamMemberEntry.data.qualification.map((p) => (
-                        <span
-                          class="text-sm text-gray-500 dark:text-gray-400 
-  "
-                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400">
                           {p}
                         </span>
                       ))}
