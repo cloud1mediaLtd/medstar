@@ -38,22 +38,22 @@ const { Content } = await entry.render();
     </div>
 
     <div class="mx-auto max-w-[735px] my-8 pb-8 text-center border-b">
-      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+      <span class="uppercase tracking-wider text-sm font-medium text-gray-500 dark:text-gray-400">
         {entry.data.category}
       </span>
       <h1
-        class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-black"
+        class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-medbg"
       >
         {entry.data.title}
       </h1>
     </div>
 
-    <div class="mx-auto prose prose-lg mt-6">
+    <div class="mx-auto prose prose-lg mt-6 text-gray-500 dark:text-gray-400">
       <Content />
     </div>
-    <div class="mx-auto max-w-[735px] p-8 md:p-8 bg-gray-100 rounded-md my-5">
-      <p class="text-2xl text-center mb-5">Course Dates</p>
-      <ul class="flex flex-wrap items-center justify-center gap-7">
+    <div class="mx-auto max-w-[735px] bg-slate-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 my-10">
+      <p class="text-xl text-center font-bold mb-5 text-gray-500 dark:text-gray-400">Course Dates</p>
+      <ul class="flex flex-wrap items-center justify-center gap-7 text-gray-500 dark:text-gray-400">
         {entry.data.dates.map((item: any) => <li class="list-none">{item}</li>)}
       </ul>
     </div>

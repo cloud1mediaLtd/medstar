@@ -37,22 +37,28 @@ const { Content } = await entry.render();
       />
     </div> 
   
-      <div class="mx-auto max-w-[735px] my-8 pb-8 text-center border-b">
+      <div class="mx-auto max-w-[735px] my-8 text-center">
 
         <h1
-          class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-black">
+          class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-medbg">
           {entry.data.title}
-        </h1> 
+        </h1>
+        <div class="space-x-1">
+
         {entry.data.qualification.map((p) => (
-          <span class="text-md text-gray-500">
+          <span class="text-sm text-gray-500 dark:text-gray-400 
+          ">
             {p}
           </span>
         ))}
+        </div>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       </div>
+      
   
       
       
-      <div class="mx-auto prose prose-lg">
+      <div class="mx-auto prose prose-lg text-gray-500 dark:text-gray-400">
         
         <Content />
       </div>
