@@ -6,42 +6,41 @@ const aboutfeature = [
   {
     icon: "simple-icons:handshake",
     title: "Supervised & Structured Sessions",
-    snippet: "Boost your knowledge, experience, consultation skills and confidence",
-
-},
-{
+    snippet:
+      "Boost your knowledge, experience, consultation skills and confidence",
+  },
+  {
     icon: "simple-icons:apachespark",
     title: "Senior & Experienced Faculty",
-    snippet: "All trainers are currently practicing in the UK at a senior level",
-
-},
-{
+    snippet:
+      "All trainers are currently practicing in the UK at a senior level",
+  },
+  {
     icon: "map:compass",
     title: "Great Location in Manchester",
-    snippet: "Ideally situated on the world-famous ‘Curry Mile’ in Manchester",
-
-},
-]
-
+    snippet: "Ideally situated on the world-famous 'Curry Mile' in Manchester",
+  },
+];
 ---
 
-
-  
-
-<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-8 bg-white/80 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700 rounded-md p-4 shadow-md ">
+<div
+  class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-8 bg-white/80 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700 rounded-md p-4 shadow-md"
+>
   {
     aboutfeature.map((item) => (
-      
-          <div class="flex gap-4 items-center">
-            <div class="flex mt-1 bg-medbg rounded-full p-3 w-14 h-14 shrink-0">
-              <Icon class="text-white" name={item.icon} />
-            </div>
-            <div>
-              <a href=""><h3 class="font-bold text-md dark:text-white">{item.title}</h3></a>
-              <p class="text-slate-500 mt-0 leading-tight text-sm font-semibold dark:text-gray-400">{item.snippet}</p>
-            </div>
-          </div>
-     
+      <div class="flex gap-4 items-center">
+        <div class="flex mt-1 bg-medbg rounded-full p-3 w-14 h-14 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <a href="">
+            <h3 class="font-bold text-md dark:text-white">{item.title}</h3>
+          </a>
+          <p class="text-slate-500 mt-0 leading-tight text-sm font-semibold dark:text-gray-400">
+            {item.snippet}
+          </p>
+        </div>
+      </div>
     ))
   }
 </div>
