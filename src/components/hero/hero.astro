@@ -5,13 +5,15 @@ import Features from "./features.astro";
 // <div class="md:flex justify-center z-50 hidden"><Banner /></div>
 ---
 
-<main class="bg-medbg relative border-y border-gray-200 dark:border-gray-700">
+<main class="relative">
+  <div class="bg-medbgdark/10 h-full w-full absolute z-20"></div>
+  <div class="relative border-y border-gray-200 dark:border-gray-700">
   <Strafield />
 
-  <div class="relative">
+  <div class="relative z-30">
     <div class="flex items-center relative flex-col py-28">
       <h1
-        class="mb-4 text-center text-2xl font-bold md:text-3xl lg:text-4xl text-white"
+        class="mb-4 text-center text-2xl font-bold md:text-3xl lg:text-4xl text-gray-50"
       >
         MEDASTRA PLAB 2 Courses
       </h1>
@@ -27,4 +29,5 @@ import Features from "./features.astro";
     -->
     </div>
   </div>
+</div>
 </main>

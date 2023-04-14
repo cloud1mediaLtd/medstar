@@ -1,5 +1,4 @@
 ---
-
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
@@ -39,13 +38,16 @@ const menuitems = [
   },
 ];
 ---
+
 <nav class="border-gray-200 dark:bg-slate-900 bg-slate-900">
   <div
     class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-5 md:py-2"
   >
     <div><Socialicons /></div>
     <div class="flex items-center">
-      <a class="text-white text-sm pr-4 hidden md:block" href="#">552 Claremont Road, Manchester, M14 5XL</a>
+      <a class="text-white text-sm pr-4 hidden md:block" href="#"
+        >552 Claremont Road, Manchester, M14 5XL</a
+      >
       <a
         href="tel:07865127757"
         class="text-sm text-gray-400 dark:text-white hover:underline"
@@ -54,6 +56,130 @@ const menuitems = [
     </div>
   </div>
 </nav>
+
+<nav
+  class="bg-medbg dark:bg-medbgdark border-gray-200 dark:border-gray-700 z-40 relative "
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="/" class="flex items-center">
+      <img
+        src="/fa2b3c00-2423-4c15-be39-4d4beda7092d.webp"
+        class="h-8 mr-3"
+        alt="Flowbite Logo"
+      />
+    </a>
+    <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-50 rounded-lg md:hidden hover:bg-medbgdark focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-50 dark:hover:bg-medbglight dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path></svg
+          >
+        </button>
+      <div class="hidden w-full h-full md:block md:w-auto" id="navbar-dropdown">
+        <ul
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 dark:border-gray-700 md:dark:bg-transparent md:bg-transparent"
+        >
+          <li>
+            <a
+              href="/"
+              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white hover:text-gray-200 md:p-0 dark:bg-blue-600 md:dark:bg-transparent"
+              >Home</a
+            >
+          </li>
+          <li>
+            <button
+              id="dropdownNavbarLink"
+              data-dropdown-toggle="dropdownNavbar"
+              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >Courses <svg
+                class="w-5 h-5 ml-1"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path></svg
+              ></button
+            >
+            <!-- Dropdown menu -->
+
+            <div
+              id="dropdownNavbar"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                aria-labelledby="dropdownLargeButton"
+              >
+                
+                <li>
+                  <a
+                    href="/courses/plab2"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >PLAB 2</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/courses/beyond"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Beyond PLAB 2</a
+                  >
+                </li>
+              </ul>
+              
+            </div>
+          </li>
+          <li>
+            <a
+              href="/about"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0 dark:text-white md:dark:hover:text-gray-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="/accommodation"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >Accommodation</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >Contact</a
+            >
+          </li>
+         
+        </ul>
+      </div>
+
+        
+        
+
+
+  </div>
+</nav>
+
+<!-- old nav bar 
 <div class="bg-medbg dark:bg-medbgdark">
   <header
     class="flex flex-col lg:flex-row justify-between items-center px-4 md:px-0 py-3 max-w-screen-xl mx-auto"
@@ -69,10 +195,34 @@ const menuitems = [
           />
         </a>
         <div class="block lg:hidden">
-        <div class="flex space-x-2">
-          <div class=""><Nightmode /></div>
-          <button></button><MenuIcon class="w-4 h-4 mx-2 text-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-200 dark:focus:ring-gray-400" />
-        </div>
+          <div class="flex space-x-2">
+            <div class=""><Nightmode /></div>
+            <button
+              id="astronav-menu"
+              type="button"
+              class="h-4 w-4 text-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-200 dark:focus:ring-gray-400 rounded-lg text-sm"
+            >
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+              >
+                <title>Menu</title>
+                <path
+                  class="astronav-toggle hidden"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"
+                ></path>
+                <path
+                  class="astronav-toggle"
+                  fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto p-2 mt-2 lg:flex lg:mt-0">
@@ -87,7 +237,6 @@ const menuitems = [
                     target={item.target}
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
-                    
                   />
                 )}
 
@@ -119,3 +268,36 @@ const menuitems = [
     </div>
   </header>
 </div>
+-->
+
+<!-- 
+{
+  menuitems.map((item, index) => (
+    <>
+      {item.children && (
+        <Dropdown
+          title={item.title}
+          path={item.path}
+          target={item.target}
+          children={item.children}
+          lastItem={index === menuitems.length - 1}
+        />
+      )}
+
+      {!item.children && (
+        <li>
+          <a
+            href={item.path}
+            aria-current="page"
+            target={item.target}
+            class="text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+          >
+            {item.title}
+          </a>
+        </li>
+      )}
+    </>
+  ))
+}
+
+-->
