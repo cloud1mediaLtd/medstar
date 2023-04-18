@@ -3,7 +3,7 @@ draft: false
 title: "Communication Skills"
 category: "Plab 2"
 price: "£145"
-snippet: "Perfect your communication skills suitable for new studenta and PLAB gradutes"
+snippet: "Perfect your communication skills suitable for new students and PLAB graduates"
 image: {
     src: "/communicate.png",
     alt: "full stack web development"

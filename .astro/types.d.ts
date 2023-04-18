@@ -129,6 +129,13 @@ declare module 'astro:content' {
 },
 },
 "courses": {
+"Communicationskills.md": {
+  id: "Communicationskills.md",
+  slug: "communicationskills",
+  body: string,
+  collection: "courses",
+  data: InferEntrySchema<"courses">
+},
 "communicationskills.md": {
   id: "communicationskills.md",
   slug: "communicationskills",
