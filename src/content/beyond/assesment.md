@@ -3,7 +3,7 @@ draft: false
 title: "Clinical Skills Assessment FY2"
 category: "Beyond Plab 2"
 price: "£15"
-snippet: "We will individually review your CV or application form and suggest improvements."
+snippet: "Coming soon."
 image: {
     src: "/skills.png",
     alt: "full stack web development"

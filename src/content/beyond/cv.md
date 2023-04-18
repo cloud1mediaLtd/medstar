@@ -3,7 +3,7 @@ draft: false
 title: "CV Writing and Interview Skills"
 category: "Beyond Plab 2"
 price: "£145"
-snippet: "This is our most detailed course, providing everything you need to sail through the PLAB 2 exam."
+snippet: "Expert guidance to help you succeed on your job hunt and getting the postion you deserve."
 image: {
     src: "/interview.png",
     alt: "full stack web development"
