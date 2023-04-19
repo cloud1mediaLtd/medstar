@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon";
 import Container from "./ui/container.astro";
 import Sectionhead from "./ui/sectionhead.astro";
-import Review from "./ui/review.astro";
+import Review from "./ui/review.jsx";
 
 const review = [
   {
@@ -28,20 +28,22 @@ const review = [
     <Fragment slot="desc">What our customers say</Fragment>
   </Sectionhead>
 
-
-
-<div class="my-16">
-  
-  <ul class="grid md:grid-cols-2 gap-4">
-    {
-      review.map((item) => (
-        <li>
-          <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
-            <Review name={item.name} text={item.text} rating={item.rating} date={item.date} />
-          </div>
-        </li>
-      ))
-    }
-  </ul>
-</div>
+  <div class="my-16">
+    <ul class="grid md:grid-cols-2 gap-4">
+      {
+        review.map((item) => (
+          <li>
+            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+              <Review
+                name={item.name}
+                text={item.text}
+                rating={item.rating}
+                date={item.date}
+              />
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </Container>

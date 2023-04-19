@@ -11,6 +11,7 @@ import Jumbo from "@components/jumbo.astro";
 import Mainservices from "@components/mainservices.astro";
 import Reviews from "@components/reviews.astro";
 import Layout from "@layouts/Layout.astro";
+import Slider from "@components/slider.jsx";
 ---
 
 <Layout title="">
@@ -28,6 +29,6 @@ import Layout from "@layouts/Layout.astro";
     <Accommodationsection />
     <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
-    <Reviews />
+    <Slider client:visible />
   </Container>
 </Layout>

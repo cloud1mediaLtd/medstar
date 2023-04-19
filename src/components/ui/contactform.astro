@@ -1,5 +1,5 @@
 ---
-import Button from "./ui/button.astro";
+import Button from "./button.astro";
 ---
 
 <!-- To make this contact form work, create your free access key from https://web3forms.com/
@@ -9,8 +9,13 @@ import Button from "./ui/button.astro";
   method="POST"
   id="form"
   class="needs-validation"
-  novalidate>
-  <input type="hidden" name="access_key" value="c001b106-29de-4761-9974-b6fede549852" />
+  novalidate
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="c001b106-29de-4761-9974-b6fede549852"
+  />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
