@@ -65,10 +65,7 @@ export default () => {
           loop: true,
         },
       }}
-      navigation
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
     >
       {review.map((item) => (
         <SwiperSlide className="swiper-slide bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
