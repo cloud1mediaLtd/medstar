@@ -50,9 +50,21 @@ export default () => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       centeredSlides={true}
       grabCursor={true}
+      slidesPerView={1}
       loop={true}
-      spaceBetween={35}
-      slidesPerView={3}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          loop: true,
+        },
+
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+          loop: true,
+        },
+      }}
       navigation
       pagination={{ clickable: true }}
       onSwiper={(swiper) => console.log(swiper)}
