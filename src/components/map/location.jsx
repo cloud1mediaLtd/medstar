@@ -83,8 +83,11 @@ const Location = () => {
   }, []);
 
   return (
-    <div className="pt-8">
-      <div id="map" style={{ width: "100%", height: "400px" }} />
+    <div className="p-4 rounded">
+      <div
+        id="map"
+        className="w-full max-w-screen-xl mx-auto rounded p-4 md:py-8 h-72 md:h-96 "
+      />
     </div>
   );
 };

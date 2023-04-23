@@ -3,90 +3,86 @@ import { Icon } from "astro-icon";
 
 import Socialicons from "./socialicons.astro";
 import Nightmode from "./Nightmode.astro";
-
-const menuitems = [
-  {
-    title: "About us",
-    path: "/about",
-    target: "",
-  },
-
-  {
-    title: "Resources",
-    path: "/resources",
-    target: "",
-  },
-  {
-    title: "Privacy policy",
-    path: "/policy",
-    target: "",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-    target: "",
-  },
-];
 ---
 
-<footer class="pt-5 bg-slate-900">
-  <div
-    class="md:flex px-5 md:px-0 py-5 justify-between max-w-screen-xl mx-auto"
-  >
-    <div class="text-white flex content-center flex-wrap">
-      <div class="space-y-6">
-        <div class="flex items-center mt-2 space-x-2 text-white">
-          <Icon class="w-4 h-4" name="ic:baseline-chat" />
-          <a href="mailto:info@medastra.co.uk">info@medastra.co.uk</a>
-        </div>
-        <div class="flex items-center space-x-2 text-white">
-          <Icon class="w-4 h-4" name="ic:baseline-add-ic-call" /><a
-            href="tel:+447459236999">+44 7865 127757</a
-          >
-        </div>
-        <div class="flex space-x-2 text-white">
-          <Icon class="w-4 h-4" name="ic:outline-location-on" />
-          <span>552 Claremont Road <br /> Manchester <br /> M14 5XL</span>
-        </div>
-        <Socialicons />
-        <div class=""><Nightmode /></div>
+<footer class="bg-medbgdark dark:bg-gray-900">
+  <div class="w-full max-w-screen-xl mx-auto p-0 md:p-4 md:py-8">
+    <div class="hidden text-white md:flex content-center flex-wrap space-x-5">
+      <div class="flex items-center space-x-2 text-white">
+        <Icon class="w-4 h-4" name="ic:baseline-chat" />
+        <a href="mailto:info@medastra.co.uk">info@medastra.co.uk</a>
+      </div>
+      <div class="flex items-center space-x-2 text-white">
+        <Icon class="w-4 h-4" name="ic:baseline-add-ic-call" /><a
+          href="tel:+447459236999">+44 7865 127757</a
+        >
+      </div>
+      <div class="flex space-x-2 text-white">
+        <Icon class="w-4 h-4" name="ic:outline-location-on" />
+        <span>552 Claremont Road, Manchester - M14 5XL</span>
       </div>
     </div>
-    <div>
-      <ul class="grid grid-cols-2 gap-5 pt-5 md:pt-0 md:px-0">
-        {
-          menuitems.map((item, index) => (
-            <li>
-              <a
-                href={item.path}
-                target={item.target}
-                class="flex py-2 text-white hover:text-gray-200"
-              >
-                {item.title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </div>
-  <div
-    class="flex justify-between px-5 md:px-0 py-5 max-w-screen-xl mx-auto border-t border-white/10"
-  >
-    <div class="">
-      <p class="text-center text-xs text-slate-200">
-        Hosted By <a
-          href="https://cloud1media.com"
-          target="_blank"
-          rel="noopener"
-          class="hover:underline"
-        >
-          Cloud1media Ltd
+
+    <hr
+      class="hidden md:block my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+    />
+
+    <div class="w-full max-w-screen-xl mx-auto p-4 lg:p-0 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="/" class="flex items-center mb-4 sm:mb-0">
+          <img
+            src="/fa2b3c00-2423-4c15-be39-4d4beda7092d.webp"
+            class="h-8 mr-3"
+            alt="Medastra Logo"
+          />
         </a>
-      </p>
-    </div>
-    <div class="text-center text-xs text-slate-200">
-      All rights reserved © {new Date().getFullYear()}
+        <ul
+          class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-100 sm:mb-0 dark:text-gray-400"
+        >
+          <li>
+            <a href="/about" class="mr-4 hover:underline md:mr-6">About</a>
+          </li>
+          <li>
+            <a href="policy" class="mr-4 hover:underline md:mr-6"
+              >Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Legal Notice</a>
+          </li>
+          <li>
+            <a href="/contact" class="mr-4 hover:underline">Contact</a>
+          </li>
+          <li class="">
+            <Socialicons />
+          </li>
+          <li><Nightmode /></li>
+        </ul>
+      </div>
+      <hr
+        class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+      />
+
+      <div class="flex justify-between space-x-2">
+        <div class="">
+          <p class="text-xs text-slate-200">
+            Hosted By <a
+              href="https://cloud1media.com"
+              target="_blank"
+              rel="noopener"
+              class="hover:underline"
+            >
+              Cloud1media Ltd
+            </a>
+          </p>
+        </div>
+        <span
+          class="block text-xs text-gray-100 sm:text-center dark:text-gray-400"
+          >© {new Date().getFullYear()}
+          <a href="/" class="hover:underline">Medastra™</a>. All Rights
+          Reserved.</span
+        >
+      </div>
     </div>
   </div>
 </footer>

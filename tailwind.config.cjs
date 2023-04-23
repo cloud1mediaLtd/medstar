@@ -8,8 +8,8 @@ module.exports = {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
       scale: {
-        '-100': '-1',
-    },
+        "-100": "-1",
+      },
       colors: {
         medbg: "#1A6C79",
         medbglight: "#2494a6",
@@ -17,8 +17,11 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), "@tailwindcss/aspect-ratio",
-  require('flowbite/plugin'),
-],
-darkMode: 'class',
+  plugins: [
+    require("@tailwindcss/typography"),
+    "@tailwindcss/aspect-ratio",
+    require("@tailwindcss/line-clamp"),
+    require("flowbite/plugin"),
+  ],
+  darkMode: "class",
 };

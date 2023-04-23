@@ -19,6 +19,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^3.0.0",
     "@fontsource/inter": "^4.5.14",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@types/alpinejs": "^3.7.1",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
