@@ -5,6 +5,7 @@ import Container from "@components/ui/container.astro";
 import Aboutsection from "@components/aboutsection.astro";
 import Accommodationsection from "@components/accommodationsection.astro";
 import { Picture } from "@astrojs/image/components";
+import Teamsection from "@components/ui/teamsection.astro";
 ---
 
 <Layout title="About Medastra">
@@ -12,19 +13,19 @@ import { Picture } from "@astrojs/image/components";
     <main>
       <div class="">
         <Aboutsection />
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+
         <!-- Section -->
         <div class="">
           <div>
             <div class="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-4">
               <div class="md:col-span-3">
                 <h2
-                  class="text-3xl md:text-4xl font-extrabold dark:text-white pb-5 text-center md:text-start"
+                  class="text-3xl md:text-4xl font-extrabold dark:text-white pb-8 text-center md:text-start"
                 >
                   Supervised and Structured Practice Sessions
                 </h2>
                 <ul
-                  class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400"
+                  class="space-y-4 text-left text-gray-500 dark:text-gray-400"
                 >
                   <li class="flex items-center space-x-3">
                     <!-- Icon -->
@@ -119,24 +120,26 @@ import { Picture } from "@astrojs/image/components";
               <div
                 class="bg-cover bg-center rounded-md h-auto max-w-full min-h-[175px] -scale-x-100"
                 style="background-image: url(/communicate.png)"
-               />
-
+              >
+              </div>
             </div>
           </div>
-          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         </div>
+        <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
 
         <!-- Section -->
         <div class="">
           <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
             <div class="md:col-span-3">
-              <h2 class="text-3xl md:text-4xl font-extrabold dark:text-white pb-5 text-center md:text-start">
+              <h2
+                class="text-3xl md:text-4xl font-extrabold dark:text-white pb-8 text-center md:text-start"
+              >
                 Senior and Experienced Faculty
               </h2>
 
               <div class="">
                 <ul
-                  class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400"
+                  class="space-y-4 text-left text-gray-500 dark:text-gray-400"
                 >
                   <li class="flex items-center space-x-3">
                     <!-- Icon -->
@@ -290,48 +293,165 @@ import { Picture } from "@astrojs/image/components";
               </div>
             </div>
             <div
-            class="bg-cover bg-[-600px] rounded-md h-auto max-w-full min-h-[175px] -scale-x-100"
-            style="background-image: url(/skills.png)"
-           />
+              class="bg-cover bg-[-500px] rounded-md h-auto max-w-full min-h-[150px] -scale-x-100"
+              style="background-image: url(/skills.png)"
+            >
+            </div>
           </div>
-
-          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         </div>
+        <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
+
         <!-- Section -->
-        <Accommodationsection>
-          <!-- Section -->
-          <div class="my-8">
-            <h2 class="font-bold mb-4 text-gray-400">What we offer</h2>
-            <p class="text-gray-400">
-              We do not just provide PLAB2 courses; our support extends well
-              beyond this.<br />
-              <ul class="list-disc text-gray-400">
-                <li>
-                  excellent accommodation in the heart of Manchester close to
-                  the course and GMC
-                </li>
-                <li>
-                  comprehensive PLAB 2 preparation through our carefully
-                  tailored courses
-                </li>
-                <li>
-                  additional opportunity to practice through our structured and
-                  supervised practice sessions
-                </li>
-                <li>CV writing and interview preparation courses</li>
-                <li>clinical skills assessment course</li>
-                <li>NHS orientation and life in the UK sessions</li>
-                <li>
-                  help with arranging your clinical attachments and first job
-                </li>
-                <li>
-                  help with your visa and immigration matters through our legal
-                  contacts
-                </li>
-              </ul>
-            </p>
+        <div class="">
+          <h2
+            class="text-3xl md:text-4xl font-extrabold dark:text-white pb-8 text-center md:text-start"
+          >
+            What else do we offer
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+          <div class="">
+            <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span
+                  >Excellent accommodation in the heart of Manchester close to
+                  the course and GMC.</span
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span
+                  >Comprehensive PLAB 2 preparation through our carefully
+                  tailored courses.</span
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span
+                  >Additional opportunity to practice through our structured and
+                  supervised practice sessions.</span
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span>CV writing and interview preparation courses.</span>
+              </li>
+            </ul>
           </div>
-        </Accommodationsection>
+          <div>
+            <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span>Clinical skills assessment course.</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span>NHS orientation and life in the UK sessions.</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span
+                  >Help with arranging your clinical attachments and first job.</span
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path></svg
+                >
+                <span
+                  >Help with your visa and immigration matters through our legal
+                  contacts.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
+
+        <!-- Section -->
+        <Accommodationsection />
+        <!-- Section -->
+        <Teamsection />
       </div>
     </main>
   </Container>

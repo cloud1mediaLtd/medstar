@@ -3,19 +3,20 @@ import { Icon } from "astro-icon";
 import Sectionhead from "./ui/sectionhead.astro";
 ---
 
-<Sectionhead align="center">
-  <Fragment slot="title">FAQ</Fragment>
-  <Fragment slot="desc">Frequently asked questions</Fragment>
-</Sectionhead>
+<h2
+  class="text-3xl md:text-4xl font-extrabold dark:text-white pb-8 text-center md:text-start"
+>
+  Frequently asked questions
+</h2>
 
-<div class="my-16">
+<div class="">
   <div id="accordion-collapse" data-accordion="collapse">
     <h2 id="accordion-collapse-heading-1">
       <button
         type="button"
         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
         data-accordion-target="#accordion-collapse-body-1"
-        aria-expanded="true"
+        aria-expanded="false"
         aria-controls="accordion-collapse-body-1"
       >
         <span>Do you offer accommodation?</span>
@@ -52,7 +53,7 @@ import Sectionhead from "./ui/sectionhead.astro";
         <p class="text-gray-500 dark:text-gray-400">
           Check out our guide and <a
             href="/accommodation"
-            class="text-medbg dark:text-blue-500 hover:underline">Read more</a
+            class="text-medbg dark:text-medbglight hover:underline">Read more</a
           >
         </p>
       </div>
@@ -90,21 +91,151 @@ import Sectionhead from "./ui/sectionhead.astro";
           Manchester, famously known as ‘Curry Mile’, where you will find:
         </p>
         <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-          <li>Restaurants serving a variety of cuisines</li>
-          <li>Supermarkets</li>
-          <li>Pharmacies</li>
-          <li>Post Office</li>
-          <li>ATMs</li>
-          <li>Public transport</li>
-          <li>And much more</li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>Restaurants serving a variety of cuisines</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>Supermarkets</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>Pharmacies</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>Post Office</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>ATMs</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>Public transport</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>And much more</span>
+          </li>
         </ul>
-        <p class="mb-2 text-gray-500 dark:text-gray-400">
+        <p class="py-2 text-gray-500 dark:text-gray-400">
           We are also close to:
         </p>
         <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-          <li>GMC buildings (where you will take your PLAB exam)</li>
-          <li>Manchester University</li>
-          <li>Manchester Royal Infirmary</li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>GMC buildings (where you will take your PLAB exam).</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>Manchester University.</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>Manchester Royal Infirmary.</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -137,44 +268,149 @@ import Sectionhead from "./ui/sectionhead.astro";
     >
       <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
         <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-          <li>
-            Our course is unique because it is the ONLY course delivered by
-            senior, practicing doctors within the NHS who have decades of
-            clinical and medical training experience, thus making them the most
-            qualified trainers by far!
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >Our course is unique because it is the ONLY course delivered by
+              senior, practicing doctors within the NHS who have decades of
+              clinical and medical training experience, thus making them the
+              most qualified trainers by far!</span
+            >
           </li>
-          <li>
-            We follow GMC's guidance on Good Medical Practice and pride
-            ourselves on our ethical practice.
+
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >We follow GMC's guidance on Good Medical Practice and pride
+              ourselves on our ethical practice.</span
+            >
           </li>
-          <li>
-            We offer a keynote lecture by a former GMC PLAB EXAMINER who will
-            give you extremely valuable tips to be successful on the day of your
-            exam.
+
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >We offer a keynote lecture by a former GMC PLAB EXAMINER who will
+              give you extremely valuable tips to be successful on the day of
+              your exam.
+            </span>
           </li>
-          <li>
-            We offer you a UNIQUE 8 days of structured and supervised PRACTICE
-            SESSIONS under timed exam conditions.
+
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >We offer you a UNIQUE 8 days of structured and supervised
+              PRACTICE SESSIONS under timed exam conditions.
+            </span>
           </li>
-          <li>We do NOT teach or encourage scripts.</li>
-          <li>
-            We do NOT teach or obtain real GMC PLAB cases as we believe this is
-            very unethical and it puts candidates at a significant disadvantage
-            trying to predict cases that might be different.
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span>We do NOT teach or encourage scripts.</span>
           </li>
-          <li>
-            Our mock exams are also conducted by the senior doctors to ensure
-            that you receive the correct guidance and feedback in order to
-            maximize your chances of success in the PLAB2 exam and beyond.
+
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >We do NOT teach or obtain real GMC PLAB cases as we believe this
+              is very unethical and it puts candidates at a significant
+              disadvantage trying to predict cases that might be different.
+            </span>
           </li>
-          <li>
-            You will get PERSONALISED feedback from a PLAB examiner on your
-            performance in the mock exams.
+
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >Our mock exams are also conducted by the senior doctors to ensure
+              that you receive the correct guidance and feedback in order to
+              maximize your chances of success in the PLAB2 exam and beyond.
+            </span>
           </li>
-          <li>
-            We will also have trained simulators as patients for the mock exams,
-            just like you will face in the PLAB2 exam so that you are well
-            prepared for this.
+
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >You will get PERSONALISED feedback from a PLAB examiner on your
+              performance in the mock exams.
+            </span>
           </li>
         </ul>
       </div>
@@ -184,7 +420,7 @@ import Sectionhead from "./ui/sectionhead.astro";
         type="button"
         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
         data-accordion-target="#accordion-collapse-body-4"
-        aria-expanded="true"
+        aria-expanded="false"
         aria-controls="accordion-collapse-body-4"
       >
         <span>What makes Medastra differant?</span>
@@ -207,7 +443,9 @@ import Sectionhead from "./ui/sectionhead.astro";
       aria-labelledby="accordion-collapse-heading-4"
     >
       <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-        <ul class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400 flex flex-col content-center">
+        <ul
+          class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400 flex flex-col content-center"
+        >
           <li class="flex items-center space-x-3">
             <!-- Icon -->
             <svg
@@ -221,7 +459,10 @@ import Sectionhead from "./ui/sectionhead.astro";
                 clip-rule="evenodd"></path></svg
             >
             <span
-              >Our course is unique because it is the ONLY course delivered by senior, practicing doctors within the NHS who have decades of clinical and medical training experience, thus making them the most qualified trainers by far! 
+              >Our course is unique because it is the ONLY course delivered by
+              senior, practicing doctors within the NHS who have decades of
+              clinical and medical training experience, thus making them the
+              most qualified trainers by far!
             </span>
           </li>
           <li class="flex items-center space-x-3">
@@ -236,22 +477,9 @@ import Sectionhead from "./ui/sectionhead.astro";
                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                 clip-rule="evenodd"></path></svg
             >
-            <span> We follow GMC's guidance on Good Medical Practice and pride ourselves on our ethical practice.</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <!-- Icon -->
-            <svg
-              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-              ><path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path></svg
-            >
-            <span
-              >We offer a keynote lecture by a former GMC PLAB EXAMINER who will give you extremely valuable tips to be successful on the day of your exam.</span
+            <span>
+              We follow GMC's guidance on Good Medical Practice and pride
+              ourselves on our ethical practice.</span
             >
           </li>
           <li class="flex items-center space-x-3">
@@ -267,7 +495,9 @@ import Sectionhead from "./ui/sectionhead.astro";
                 clip-rule="evenodd"></path></svg
             >
             <span
-              >We offer you a UNIQUE 8 days of structured and supervised PRACTICE SESSIONS under timed exam conditions</span
+              >We offer a keynote lecture by a former GMC PLAB EXAMINER who will
+              give you extremely valuable tips to be successful on the day of
+              your exam.</span
             >
           </li>
           <li class="flex items-center space-x-3">
@@ -283,7 +513,8 @@ import Sectionhead from "./ui/sectionhead.astro";
                 clip-rule="evenodd"></path></svg
             >
             <span
-              >We do NOT teach or encourage scripts.</span
+              >We offer you a UNIQUE 8 days of structured and supervised
+              PRACTICE SESSIONS under timed exam conditions</span
             >
           </li>
           <li class="flex items-center space-x-3">
@@ -298,9 +529,7 @@ import Sectionhead from "./ui/sectionhead.astro";
                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                 clip-rule="evenodd"></path></svg
             >
-            <span
-              >We do NOT teach or obtain real GMC PLAB cases as we believe this is very unethical and it puts candidates at a significant disadvantage trying to predict cases that might be different. </span
-            >
+            <span>We do NOT teach or encourage scripts.</span>
           </li>
           <li class="flex items-center space-x-3">
             <!-- Icon -->
@@ -315,8 +544,10 @@ import Sectionhead from "./ui/sectionhead.astro";
                 clip-rule="evenodd"></path></svg
             >
             <span
-              >Our mock exams are also conducted by the senior doctors to ensure that you receive the correct guidance and feedback in order to maximize your chances of success in the PLAB2 exam and beyond. </span
-            >
+              >We do NOT teach or obtain real GMC PLAB cases as we believe this
+              is very unethical and it puts candidates at a significant
+              disadvantage trying to predict cases that might be different.
+            </span>
           </li>
           <li class="flex items-center space-x-3">
             <!-- Icon -->
@@ -331,8 +562,10 @@ import Sectionhead from "./ui/sectionhead.astro";
                 clip-rule="evenodd"></path></svg
             >
             <span
-              >You will get PERSONALISED feedback from a PLAB examiner on your performance in the mock exams. </span
-            >
+              >Our mock exams are also conducted by the senior doctors to ensure
+              that you receive the correct guidance and feedback in order to
+              maximize your chances of success in the PLAB2 exam and beyond.
+            </span>
           </li>
           <li class="flex items-center space-x-3">
             <!-- Icon -->
@@ -347,13 +580,30 @@ import Sectionhead from "./ui/sectionhead.astro";
                 clip-rule="evenodd"></path></svg
             >
             <span
-              >We will also have trained simulators as patients for the mock exams, just like you will face in the PLAB2 exam so that you are well prepared for this. </span
-            >
+              >You will get PERSONALISED feedback from a PLAB examiner on your
+              performance in the mock exams.
+            </span>
           </li>
-          
+          <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg
+              class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path></svg
+            >
+            <span
+              >We will also have trained simulators as patients for the mock
+              exams, just like you will face in the PLAB2 exam so that you are
+              well prepared for this.
+            </span>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-

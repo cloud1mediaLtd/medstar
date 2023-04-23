@@ -4,30 +4,13 @@ import { Icon } from "astro-icon";
 import Socialicons from "./socialicons.astro";
 import Nightmode from "./Nightmode.astro";
 
-
-
 const menuitems = [
   {
     title: "About us",
     path: "/about",
     target: "",
   },
-  {
-    title: "Courses",
-    path: "/courses",
-    target: "",
-  },
-  {
-    title: "Team",
-    path: "/team",
-    target: "",
-  },
 
-  {
-    title: "Accommodation",
-    path: "/accommodation",
-    target: "",
-  },
   {
     title: "Resources",
     path: "/resources",
@@ -47,11 +30,13 @@ const menuitems = [
 ---
 
 <footer class="pt-5 bg-slate-900">
-  <div class="md:flex px-5 md:px-0 py-5 justify-between max-w-screen-xl mx-auto">
+  <div
+    class="md:flex px-5 md:px-0 py-5 justify-between max-w-screen-xl mx-auto"
+  >
     <div class="text-white flex content-center flex-wrap">
       <div class="space-y-6">
         <div class="flex items-center mt-2 space-x-2 text-white">
-          <Icon class=" w-4 h-4" name="ic:baseline-chat" />
+          <Icon class="w-4 h-4" name="ic:baseline-chat" />
           <a href="mailto:info@medastra.co.uk">info@medastra.co.uk</a>
         </div>
         <div class="flex items-center space-x-2 text-white">
@@ -68,7 +53,7 @@ const menuitems = [
       </div>
     </div>
     <div>
-      <ul class="grid grid-cols-2 gap-2 pt-5 md:pt-0  md:px-0">
+      <ul class="grid grid-cols-2 gap-5 pt-5 md:pt-0 md:px-0">
         {
           menuitems.map((item, index) => (
             <li>
@@ -86,10 +71,10 @@ const menuitems = [
     </div>
   </div>
   <div
-    class="flex justify-between  px-5 md:px-0 py-5 max-w-screen-xl mx-auto border-t border-white/10"
+    class="flex justify-between px-5 md:px-0 py-5 max-w-screen-xl mx-auto border-t border-white/10"
   >
     <div class="">
-      <p class="text-center text-xs text-slate-200 ">
+      <p class="text-center text-xs text-slate-200">
         Hosted By <a
           href="https://cloud1media.com"
           target="_blank"
@@ -100,7 +85,7 @@ const menuitems = [
         </a>
       </p>
     </div>
-    <div class="text-center text-xs text-slate-200 ">
+    <div class="text-center text-xs text-slate-200">
       All rights reserved © {new Date().getFullYear()}
     </div>
   </div>
