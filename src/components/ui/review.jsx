@@ -3,8 +3,8 @@ import React from "react";
 const Review = ({ name, text, rating, date }) => (
   <article>
     <div className="">
-      <div className="flex items-center mb-4 space-x-4 max-w">
-        <div className="space-y-1 font-medium text-black dark:text-white">
+      <div className="flex items-center mb-4 space-x-4">
+        <div className="space-y-1 font-medium text-white dark:text-white">
           <div className="flex space-x-5">
             <p>{name}</p>
             {rating.map((value, index) => (
@@ -27,14 +27,14 @@ const Review = ({ name, text, rating, date }) => (
           </div>
 
           <p>
-            <time className="text-xs text-gray-400" dateTime="2017-03-03 19:00">
+            <time className="text-xs text-gray-300" dateTime="2017-03-03 19:00">
               {date}
             </time>
           </p>
         </div>
       </div>
 
-      <p className=" text-gray-500 dark:text-gray-400 mb-5 line-clamp-5">
+      <p className=" text-gray-100 dark:text-gray-200 mb-5 line-clamp-6">
         {text}
       </p>
     </div>
