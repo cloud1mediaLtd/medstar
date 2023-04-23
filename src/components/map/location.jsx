@@ -83,7 +83,7 @@ const Location = () => {
   }, []);
 
   return (
-    <div className="p-4 rounded">
+    <div className="p-4 rounded relative">
       <div
         id="map"
         className="w-full max-w-screen-xl mx-auto rounded p-4 md:py-8 h-72 md:h-96 "
