@@ -34,7 +34,7 @@ const Review = ({ name, text, rating, date }) => (
         </div>
       </div>
 
-      <p className=" text-gray-100 dark:text-gray-200 mb-5 line-clamp-6">
+      <p className=" text-gray-100 dark:text-gray-200 mb-5 line-clamp-5">
         {text}
       </p>
     </div>

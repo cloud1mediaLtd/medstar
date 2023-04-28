@@ -18,7 +18,7 @@ const review = [
     date: "15-04-2023",
   },
   {
-    name: "Muhammad Bin Sabir",
+    name: "Muhammad Sabir",
     text: "Hello everyone. I wanted to share my experience of PLAB 2 crash course from Medastra. It is very overwhelming at times because sometimes you’ve signed up for another academy and then later on you get to know about the reality of the other academies and then you find medastra (just like I did). I decided to go with the crash course and spend that money rather than going through the mental stress of not passing the exam and then spending all the money, all over again. So the course just comprises of all the approaches that one need in the exam which is really helpful. The best part is that they give one on one teaching experience and you dont feel left out. And you get to learn to approach the most challenging tasks i.e LGBTQ scenarios and angry patient scenarios etc. Dr Sara has put alot of effort and explains everything in such detail like no one else. And the thing that actually sets them apart is the experience that they both work in the NHS and that too as GPs which is why they’re aware of all the real life scenarios as plab 2 is based on almost all the scenarios that one would expect in a gp setting. This is the biggest relief that you get all your confusions cleared from someone actually working in the NHS and not just telling you supposed stuff. They’ve the real high field mannikin *THE METI MAN* Which actually comes in the gmc exam. The simulations on it reduce the anxiety as you already go through all that setting and you get to practice at the real meti man instead of the basic models. I would highly recommend them as both Dr Sara and Dr Awan are really hard working teachers and they’ve really put all their efforts in the course which is really helpful for someone who has no exposure to the actual NHS experience and that makes them a good trainer and sets them a class apart!",
     rating: [5],
     date: "15-04-2023",
@@ -72,7 +72,7 @@ const review = [
     date: "28-02-2023",
   },
   {
-    name: "Dr shoaib Hasan tarar",
+    name: "Dr shoaib tarar",
     text: "Best ever combination of well versed and well experienced faculty including former PLAB examiners and practicing NHS senior doctors. They exactly know what is expected in exam and what is needed for a candidate to get through in first attempt. Teaching , Communication and hands on practice for skill station with excellent manikins available at best and most favourite location of Manchester with option of getting accommodation nearby. Highly recommended.",
     rating: [5],
     date: "28-03-2023",
