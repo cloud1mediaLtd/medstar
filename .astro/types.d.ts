@@ -110,7 +110,115 @@ declare module 'astro:content' {
 	>;
 
 	const entryMap: {
-		
+		"about": {
+"about.md": {
+  id: "about.md",
+  slug: "about",
+  body: string,
+  collection: "about",
+  data: any
+} & { render(): Render[".md"] },
+},
+"beyond": {
+"assesment.md": {
+  id: "assesment.md",
+  slug: "assesment",
+  body: string,
+  collection: "beyond",
+  data: InferEntrySchema<"beyond">
+} & { render(): Render[".md"] },
+"cv.md": {
+  id: "cv.md",
+  slug: "cv",
+  body: string,
+  collection: "beyond",
+  data: InferEntrySchema<"beyond">
+} & { render(): Render[".md"] },
+"cvcheck.md": {
+  id: "cvcheck.md",
+  slug: "cvcheck",
+  body: string,
+  collection: "beyond",
+  data: InferEntrySchema<"beyond">
+} & { render(): Render[".md"] },
+},
+"blog": {
+"complete-guide-fullstack-development.md": {
+  id: "complete-guide-fullstack-development.md",
+  slug: "complete-guide-fullstack-development",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"essential-data-structures-algorithms.md": {
+  id: "essential-data-structures-algorithms.md",
+  slug: "essential-data-structures-algorithms",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"how-to-become-frontend-master.md": {
+  id: "how-to-become-frontend-master.md",
+  slug: "how-to-become-frontend-master",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] },
+"kitchensink.mdx": {
+  id: "kitchensink.mdx",
+  slug: "kitchensink",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
+},
+"courses": {
+"Communicationskills.md": {
+  id: "Communicationskills.md",
+  slug: "communicationskills",
+  body: string,
+  collection: "courses",
+  data: InferEntrySchema<"courses">
+} & { render(): Render[".md"] },
+"comprehensive.md": {
+  id: "comprehensive.md",
+  slug: "comprehensive",
+  body: string,
+  collection: "courses",
+  data: InferEntrySchema<"courses">
+} & { render(): Render[".md"] },
+"crash.md": {
+  id: "crash.md",
+  slug: "crash",
+  body: string,
+  collection: "courses",
+  data: InferEntrySchema<"courses">
+} & { render(): Render[".md"] },
+},
+"team": {
+"abas.md": {
+  id: "abas.md",
+  slug: "abas",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+} & { render(): Render[".md"] },
+"ahsan.md": {
+  id: "ahsan.md",
+  slug: "ahsan",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+} & { render(): Render[".md"] },
+"sara.md": {
+  id: "sara.md",
+  slug: "sara",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+} & { render(): Render[".md"] },
+},
+
 	};
 
 	type ContentConfig = typeof import("../src/content/config");

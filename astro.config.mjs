@@ -13,7 +13,7 @@ import sanity from "astro-sanity";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://medastra.co.uk",
+  site: "https://anasmahmud.com",
   integrations: [
     tailwind(),
     image({
@@ -23,6 +23,11 @@ export default defineConfig({
     sitemap(),
     alpinejs(),
     react(),
-    sanity(),
+    sanity({
+      projectId: "df3si275",
+      dataset: "production",
+      apiVersion: "2023-02-08",
+      useCdn: false,
+    }),
   ],
 });
