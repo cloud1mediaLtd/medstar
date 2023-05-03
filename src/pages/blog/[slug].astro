@@ -34,7 +34,7 @@ const post = await getPost(slug);
             alt="Cover image"
           />
         ) : (
-          <div class="post__cover--none" />
+          <div class="" />
         )
       }
 
@@ -50,7 +50,9 @@ const post = await getPost(slug);
         </h1>
       </div>
 
-      <div class="mx-auto prose prose-lg mt-6 text-gray-500 dark:text-gray-400">
+      <div
+        class="mx-auto prose prose-lg dark:prose-invert mt-6 text-gray-500 dark:text-gray-400 pb-12"
+      >
         <PortableText value={post.body} />
       </div>
     </section>
@@ -65,5 +67,5 @@ const post = await getPost(slug);
           }
         </div>
       
-      -->```
+      -->
 </Layout>

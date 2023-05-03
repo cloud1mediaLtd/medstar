@@ -4,7 +4,6 @@ import Footer from "@components/nav/footer.astro";
 import Navbar from "@components/nav/navbar.astro";
 import Location from "@components/map/location.jsx";
 import "@fontsource/inter/variable.css";
-import Speeddial from "@components/speeddial.astro";
 
 import Accordian from "@components/accordian.astro";
 import Container from "@components/ui/container.astro";
@@ -91,9 +90,8 @@ const makeTitle = title
     <slot />
     <Container>
       <Accordian />
+      <Location client:visible />
     </Container>
-
-    <Location client:visible />
 
     <Footer />
     <style is:global>
