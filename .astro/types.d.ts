@@ -1,7 +1,63 @@
 declare module 'astro:content' {
+	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+declare module 'astro:content' {
+	interface Render {
+		'.md': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
 	export { z } from 'astro/zod';
 	export type CollectionEntry<C extends keyof typeof entryMap> =
-		(typeof entryMap)[C][keyof (typeof entryMap)[C]] & Render;
+		(typeof entryMap)[C][keyof (typeof entryMap)[C]];
+
+	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
+	/**
+	 * @deprecated
+	 * `astro:content` no longer provide `image()`.
+	 *
+	 * Please use it through `schema`, like such:
+	 * ```ts
+	 * import { defineCollection, z } from "astro:content";
+	 *
+	 * defineCollection({
+	 *   schema: ({ image }) =>
+	 *     z.object({
+	 *       image: image(),
+	 *     }),
+	 * });
+	 * ```
+	 */
+	export const image: never;
+
+	// This needs to be in sync with ImageMetadata
+	export type ImageFunction = () => import('astro/zod').ZodObject<{
+		src: import('astro/zod').ZodString;
+		width: import('astro/zod').ZodNumber;
+		height: import('astro/zod').ZodNumber;
+		format: import('astro/zod').ZodUnion<
+			[
+				import('astro/zod').ZodLiteral<'png'>,
+				import('astro/zod').ZodLiteral<'jpg'>,
+				import('astro/zod').ZodLiteral<'jpeg'>,
+				import('astro/zod').ZodLiteral<'tiff'>,
+				import('astro/zod').ZodLiteral<'webp'>,
+				import('astro/zod').ZodLiteral<'gif'>,
+				import('astro/zod').ZodLiteral<'svg'>
+			]
+		>;
+	}>;
 
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
@@ -16,15 +72,10 @@ declare module 'astro:content' {
 		| BaseSchemaWithoutEffects
 		| import('astro/zod').ZodEffects<BaseSchemaWithoutEffects>;
 
+	export type SchemaContext = { image: ImageFunction };
+
 	type BaseCollectionConfig<S extends BaseSchema> = {
-		schema?: S;
-		slug?: (entry: {
-			id: CollectionEntry<keyof typeof entryMap>['id'];
-			defaultSlug: string;
-			collection: string;
-			body: string;
-			data: import('astro/zod').infer<S>;
-		}) => string | Promise<string>;
+		schema?: S | ((context: SchemaContext) => S);
 	};
 	export function defineCollection<S extends BaseSchema>(
 		input: BaseCollectionConfig<S>
@@ -53,17 +104,10 @@ declare module 'astro:content' {
 		filter?: (entry: CollectionEntry<C>) => unknown
 	): Promise<CollectionEntry<C>[]>;
 
+	type ReturnTypeOrOriginal<T> = T extends (...args: any[]) => infer R ? R : T;
 	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
-		Required<ContentConfig['collections'][C]>['schema']
+		ReturnTypeOrOriginal<Required<ContentConfig['collections'][C]>['schema']>
 	>;
-
-	type Render = {
-		render(): Promise<{
-			Content: import('astro').MarkdownInstance<{}>['Content'];
-			headings: import('astro').MarkdownHeading[];
-			remarkPluginFrontmatter: Record<string, any>;
-		}>;
-	};
 
 	const entryMap: {
 		"about": {
@@ -73,7 +117,7 @@ declare module 'astro:content' {
   body: string,
   collection: "about",
   data: any
-},
+} & { render(): Render[".md"] },
 },
 "beyond": {
 "assesment.md": {
@@ -82,21 +126,21 @@ declare module 'astro:content' {
   body: string,
   collection: "beyond",
   data: InferEntrySchema<"beyond">
-},
+} & { render(): Render[".md"] },
 "cv.md": {
   id: "cv.md",
   slug: "cv",
   body: string,
   collection: "beyond",
   data: InferEntrySchema<"beyond">
-},
+} & { render(): Render[".md"] },
 "cvcheck.md": {
   id: "cvcheck.md",
   slug: "cvcheck",
   body: string,
   collection: "beyond",
   data: InferEntrySchema<"beyond">
-},
+} & { render(): Render[".md"] },
 },
 "blog": {
 "complete-guide-fullstack-development.md": {
@@ -105,28 +149,28 @@ declare module 'astro:content' {
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".md"] },
 "essential-data-structures-algorithms.md": {
   id: "essential-data-structures-algorithms.md",
   slug: "essential-data-structures-algorithms",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".md"] },
 "how-to-become-frontend-master.md": {
   id: "how-to-become-frontend-master.md",
   slug: "how-to-become-frontend-master",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".md"] },
 "kitchensink.mdx": {
   id: "kitchensink.mdx",
   slug: "kitchensink",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-},
+} & { render(): Render[".mdx"] },
 },
 "courses": {
 "Communicationskills.md": {
@@ -135,21 +179,21 @@ declare module 'astro:content' {
   body: string,
   collection: "courses",
   data: InferEntrySchema<"courses">
-},
+} & { render(): Render[".md"] },
 "comprehensive.md": {
   id: "comprehensive.md",
   slug: "comprehensive",
   body: string,
   collection: "courses",
   data: InferEntrySchema<"courses">
-},
+} & { render(): Render[".md"] },
 "crash.md": {
   id: "crash.md",
   slug: "crash",
   body: string,
   collection: "courses",
   data: InferEntrySchema<"courses">
-},
+} & { render(): Render[".md"] },
 },
 "team": {
 "abas.md": {
@@ -158,21 +202,21 @@ declare module 'astro:content' {
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
-},
+} & { render(): Render[".md"] },
 "ahsan.md": {
   id: "ahsan.md",
   slug: "ahsan",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
-},
+} & { render(): Render[".md"] },
 "sara.md": {
   id: "sara.md",
   slug: "sara",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
-},
+} & { render(): Render[".md"] },
 },
 
 	};

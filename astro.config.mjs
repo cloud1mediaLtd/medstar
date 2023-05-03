@@ -9,9 +9,25 @@ import alpinejs from "@astrojs/alpinejs";
 import react from "@astrojs/react";
 
 // https://astro.build/config
+import sanity from "astro-sanity";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://anasmahmud.com",
-  integrations: [tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), alpinejs(), react()]
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+    sitemap(),
+    alpinejs(),
+    react(),
+    sanity({
+      projectId: "df3si275",
+      dataset: "production",
+      apiVersion: "2023-02-08",
+      useCdn: false,
+    }),
+  ],
 });
