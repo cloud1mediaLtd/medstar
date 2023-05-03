@@ -13,7 +13,7 @@ import sanity from "astro-sanity";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://anasmahmud.com",
+  site: "https://medastra.co.uk",
   integrations: [
     tailwind(),
     image({
