@@ -9,7 +9,7 @@ import { urlFor } from "../../utils/image";
 
 import { getPosts, getPost } from "@utils/sanity";
 import { Params } from "astro";
-import { PortableText } from "astro-portabletext/.";
+import { PortableText } from "astro-portabletext";
 
 export async function getStaticPaths() {
   const posts = await getPosts();
