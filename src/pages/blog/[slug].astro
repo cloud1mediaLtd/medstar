@@ -26,7 +26,7 @@ const post = await getPost(slug);
 
 <Layout title={post.title!}>
   <Container>
-    <section class="post">
+    <section class="items-center">
       {
         post.mainImage ? (
           <>
@@ -39,7 +39,7 @@ const post = await getPost(slug);
               background="#ffffff"
               fit="cover"
               position="center"
-              class="rounded-t overflow-hidden h-auto z-0"
+              class="rounded overflow-hidden h-auto z-0 mx-auto pt-12"
             />
           </>
         ) : (
