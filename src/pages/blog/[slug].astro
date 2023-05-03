@@ -7,9 +7,9 @@ import { useSanityClient } from "astro-sanity";
 import { formatDate } from "../../utils/format";
 import { urlFor } from "../../utils/image";
 
-import { PortableText } from "astro-portabletext";
 import { getPosts, getPost } from "@utils/sanity";
 import { Params } from "astro";
+import { PortableText } from "astro-portabletext/.";
 
 export async function getStaticPaths() {
   const posts = await getPosts();
