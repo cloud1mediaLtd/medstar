@@ -12,18 +12,10 @@ export interface Props {
   title: string;
 }
 
-// const { src } = await getImage({
-//   src: "../../assets/hero.png",
-//   width: 800,
-//   height: 742,
-//   format: "avif",
-// });
-// console.log(src);
-
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/fa2b3c00-2423-4c15-be39-4d4beda7092d.webp",
   Astro.site
 ).toString();
 
@@ -80,6 +72,7 @@ const makeTitle = title
           image: resolvedImageWithDomain,
         },
         image: {
+          url: resolvedImageWithDomain,
           alt: "Home page screenshot",
         },
       }}

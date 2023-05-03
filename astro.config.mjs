@@ -23,11 +23,6 @@ export default defineConfig({
     sitemap(),
     alpinejs(),
     react(),
-    sanity({
-      projectId: "df3si275",
-      dataset: "production",
-      apiVersion: "2023-02-08",
-      useCdn: false,
-    }),
+    sanity(),
   ],
 });
