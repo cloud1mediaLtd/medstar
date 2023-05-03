@@ -10,6 +10,7 @@ import { urlFor } from "../../utils/image";
 import { getPosts, getPost } from "@utils/sanity";
 import { Params } from "astro";
 import { PortableText } from "astro-portabletext";
+import { Picture } from "@astrojs/image/components";
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -28,13 +29,29 @@ const post = await getPost(slug);
     <section class="post">
       {
         post.mainImage ? (
-          <img
-            class="my-8 mx-auto max-w-[735px]"
-            src={urlFor(post.mainImage).url()}
-            alt="Cover image"
-          />
+          <>
+            <Picture
+              src={urlFor(post.mainImage).url()}
+              alt="Cover image"
+              sizes="(max-width: 800px) 100vw, 800px"
+              widths={[200, 400, 800]}
+              aspectRatio="16:9"
+              background="#ffffff"
+              fit="cover"
+              position="center"
+              class="rounded-t overflow-hidden h-auto z-0"
+            />
+          </>
         ) : (
-          <div class="" />
+          <div class="flex items-center col-span-1 h-full w-full bg-gray-500">
+            <div class="content-center">
+              <img
+                class=""
+                src="/fa2b3c00-2423-4c15-be39-4d4beda7092d.webp"
+                alt=""
+              />
+            </div>
+          </div>
         )
       }
 
