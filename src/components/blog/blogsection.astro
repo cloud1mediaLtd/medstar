@@ -1,10 +1,12 @@
 ---
 import Card from "./card.astro";
 import { getPosts } from "@utils/sanity";
+
 const posts = await getPosts();
+console.log(posts);
 ---
 
 <section>
-  {posts.length ? posts.map((post) => <Card post={post} />) : null}
+  {posts.length ? posts.slice(0, 3).map((post) => <Card post={post} />) : null}
   <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
 </section>
