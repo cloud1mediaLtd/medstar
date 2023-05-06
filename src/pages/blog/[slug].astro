@@ -1,12 +1,7 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/ui/container.astro";
-import { useSanityClient } from "astro-sanity";
-
-import { formatDate } from "../../utils/format";
 import { urlFor } from "../../utils/image";
-
 import { getPosts, getPost } from "@utils/sanity";
 import { Params } from "astro";
 import { PortableText } from "astro-portabletext";

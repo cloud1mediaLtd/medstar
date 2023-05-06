@@ -10,8 +10,8 @@ const Location = () => {
       container: "map",
       style: "mapbox://styles/anasmahmud/clf547s78009m01mlx4ws1cxh",
       center: [-2.2234355305687528, 53.45299403486571],
-      zoom: 16.9,
-      pitch: 35,
+      zoom: 13,
+      pitch: 0,
       bearing: -35,
       antialias: true,
     });

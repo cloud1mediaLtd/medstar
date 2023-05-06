@@ -3,12 +3,10 @@ import Aboutsection from "@components/aboutsection.astro";
 import Accommodationsection from "@components/accommodationsection.astro";
 import Beyondservices from "@components/beyondservices.astro";
 import Container from "@components/ui/container.astro";
-import Hero from "@components/hero/hero.astro";
 import Jumbo from "@components/jumbo.astro";
-import Mainservices from "@components/mainservices.astro";
-import Reviews from "@components/reviews.astro";
 import Layout from "@layouts/Layout.astro";
 import Slider from "@components/slider.jsx";
+import Blogsection from "@components/blog/blogsection.astro";
 ---
 
 <Layout title="">
@@ -17,6 +15,7 @@ import Slider from "@components/slider.jsx";
 
     <Jumbo />
 
+    <Blogsection />
     <Accommodationsection />
 
     <Slider client:visible />
