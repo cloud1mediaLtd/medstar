@@ -117,7 +117,7 @@ export default () => {
         pagination={{ clickable: true }}
       >
         {review.map((item) => (
-          <SwiperSlide className="swiper-slide bg-medbg dark:bg-medbgdark shadow-sm border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
+          <SwiperSlide className="swiper-slide  bg-slate-100 dark:bg-gray-800  shadow-sm border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
             <Review
               name={item.name}
               text={item.text}

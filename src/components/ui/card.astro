@@ -2,14 +2,12 @@
 import { Picture } from "@astrojs/image/components";
 
 const { title, image, alt, index, snippet, href, category } = Astro.props;
-
-
 ---
 
 <div
   class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
 >
-  <a href={`/courses/${href}`}>
+  <a href={`${href}`}>
     <Picture
       src={image}
       alt={alt}
@@ -59,4 +57,3 @@ const { title, image, alt, index, snippet, href, category } = Astro.props;
     </a>
   </div>
 </div>
-

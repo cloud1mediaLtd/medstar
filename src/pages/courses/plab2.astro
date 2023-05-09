@@ -6,14 +6,6 @@ import Sectionhead from "@components/ui/sectionhead.astro";
 import Mainservices from "@components/mainservices.astro";
 
 import Layout from "@layouts/Layout.astro";
-import { getCollection } from "astro:content";
-
-const publishedcoursesEntries = await getCollection("courses");
-
-// Sort content entries by publication date
-publishedcoursesEntries.sort(function (a, b) {
-  return b.data.order - a.data.order;
-});
 ---
 
 <Layout title="courses">

@@ -6,7 +6,7 @@ const Review = ({ name, text, rating, date }) => (
       <div className="flex items-center mb-4 space-x-4">
         <div className="space-y-1 font-medium text-white dark:text-white">
           <div className="flex space-x-5">
-            <p>{name}</p>
+            <p className="text-gray-900 dark:text-white">{name}</p>
             {rating.map((value, index) => (
               <div className="flex items-center mb-1" key={index}>
                 {[...Array(value)].map((star, i) => (
@@ -34,9 +34,7 @@ const Review = ({ name, text, rating, date }) => (
         </div>
       </div>
 
-      <p className=" text-gray-100 dark:text-gray-200 mb-5 line-clamp-5">
-        {text}
-      </p>
+      <p className=" text-gray-900 dark:text-white mb-5 line-clamp-5">{text}</p>
     </div>
   </article>
 );

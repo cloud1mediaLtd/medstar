@@ -32,6 +32,26 @@ export async function getPost(slug: string): Promise<Post> {
   );
 }
 
+export async function getCourses(courseType?: string): Promise<Course[]> {
+  let query = `*[_type == "course"`;
+  if (courseType) {
+    query += ` && courseType == $courseType`;
+  }
+  query += ` && defined(slug.current)] | order(_createdAt desc)`;
+
+  const params = courseType ? { courseType } : {};
+
+  return await client.fetch(query, params);
+}
+
+export async function getCourse(slug: string): Promise<Course> {
+  return await client.fetch(
+    groq`*[_type == "course" && slug.current == $slug][0]`,
+    {
+      slug,
+    }
+  );
+}
 export interface Post {
   _type: "post";
   _createdAt: string;
@@ -42,4 +62,16 @@ export interface Post {
   body: PortableTextBlock[];
   categories: Array<string>;
   readTime: string;
+}
+
+export interface Course {
+  _type: "course";
+  _createdAt: string;
+  title?: string;
+  slug: Slug;
+  excerpt?: string;
+  mainImage?: ImageAsset;
+  body: PortableTextBlock[];
+  courseType: Array<string>;
+  courseDate: Array<string>;
 }

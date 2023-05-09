@@ -1,6 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
-
+import { formatDate } from "../../utils/format";
 import { urlFor } from "../../utils/image";
 import type { Post } from "../../utils/sanity";
 import { Icon } from "astro-icon";
@@ -13,7 +13,7 @@ const { post } = Astro.props;
 ---
 
 <div
-  class="md:grid grid-cols-3 gap-5 bg-slate-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mb-8 overflow-hidden"
+  class="flex bg-slate-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden"
 >
   {
     post.mainImage ? (
@@ -27,7 +27,7 @@ const { post } = Astro.props;
           background="#ffffff"
           fit="cover"
           position="center"
-          class="rounded-t overflow-hidden h-auto z-0"
+          class="rounded-t overflow-hidden h-12 z-0"
         />
       </>
     ) : (
@@ -42,25 +42,11 @@ const { post } = Astro.props;
       </div>
     )
   }
-  <div class="col-span-2 py-5 px-5 md:px-0">
-    <h3
-      class="mb-3 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-    >
+  <div class="col-span-2 px-5 md:px-5 flex h-10 items-center">
+    <h3 class="text-lg tracking-tight text-gray-900 dark:text-white">
       <a class="" href={`/blog/${post.slug.current}`}>
         {post.title}
       </a>
     </h3>
-    <p class="font-normal text-gray-700 dark:text-gray-400 pb-2 pr-5">
-      {post.excerpt}
-    </p>
-    <span class="flex items-center">
-      <Icon
-        name="ion:android-time"
-        class="inline-block w-4 h-4 mr-1 text-gray-500"
-      />
-      <p class="font-normal text-gray-700 dark:text-gray-400">
-        {post.readTime}
-      </p></span
-    >
   </div>
 </div>

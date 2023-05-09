@@ -173,8 +173,8 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "courses": {
-"Communicationskills.md": {
-  id: "Communicationskills.md",
+"communicationskills.md": {
+  id: "communicationskills.md",
   slug: "communicationskills",
   body: string,
   collection: "courses",

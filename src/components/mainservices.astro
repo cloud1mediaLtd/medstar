@@ -1,28 +1,23 @@
 ---
+import { urlFor } from "../utils/image";
+import { getCourses } from "@utils/sanity";
 
-import { getCollection } from "astro:content";
 import Card from "./ui/card.astro";
-
-const publishedcoursesEntries = await getCollection("courses");
-
-// Sort content entries by publication date
-publishedcoursesEntries.sort(function (a, b) {
-  return b.data.order - a.data.order;
-});
+const course = await getCourses();
 ---
 
 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
   {
-    publishedcoursesEntries.map((courseEntry, index) => (
+    course.map((courseEntry, index) => (
       <div class="group shadow-md h-max ">
         <Card
-          href={courseEntry.slug}
-          image={courseEntry.data.image.src}
-          alt={courseEntry.data.image.alt}
+          href={`${courseEntry.slug.current}`}
+          image={urlFor(courseEntry.mainImage).url()}
+          alt={courseEntry.excerpt}
           index={index}
-          title={courseEntry.data.title}
-          snippet={courseEntry.data.snippet}
-          category={courseEntry.data.category}
+          title={courseEntry.title}
+          snippet={courseEntry.excerpt}
+          category={courseEntry.courseType}
         />
       </div>
     ))
