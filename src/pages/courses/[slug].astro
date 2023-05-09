@@ -17,9 +17,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params as Params;
 
-const course = await getCourse(slug);
-
-console.log(course.courseDate);
+const course = await getCourse(slug?.toString()!);
 ---
 
 <Layout title={course.title!}>
@@ -71,16 +69,27 @@ console.log(course.courseDate);
         <PortableText value={course.body} />
       </div>
     </section>
-    <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
 
-    <ul>
-      {
-        course.courseDate.map((item, index) => (
-          <li key={`date-${index}`}>
-            <span>{new Date(item.date).toLocaleDateString()}</span>
-          </li>
-        ))
-      }
-    </ul>
+    <div
+      class="mx-auto max-w-[735px] bg-slate-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 my-10"
+    >
+      <p
+        class="text-xl text-center font-bold mb-5 text-gray-500 dark:text-gray-400"
+      >
+        Course Dates
+      </p>
+      <ul
+        class="flex flex-wrap items-center justify-center gap-7 text-gray-500 dark:text-gray-400"
+      >
+        {
+          course.courseDate?.map((item) => (
+            <li>
+              <span>{new Date(item.date).toLocaleDateString()}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
   </Container>
 </Layout>
