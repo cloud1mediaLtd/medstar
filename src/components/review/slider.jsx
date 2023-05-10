@@ -1,4 +1,4 @@
-import Review from "./ui/review";
+import Review from "./review";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
@@ -127,7 +127,7 @@ export default () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
     </>
   );
 };

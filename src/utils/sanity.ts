@@ -52,6 +52,11 @@ export async function getCourse(slug: string): Promise<Course> {
     }
   );
 }
+
+export async function getHero(): Promise<Hero> {
+  return await client.fetch(groq`*[_type == "hero"][0]`);
+}
+
 export interface Post {
   _type: "post";
   _createdAt: string;
@@ -74,4 +79,13 @@ export interface Course {
   body: PortableTextBlock[];
   courseType: Array<string>;
   courseDate: Array<string>;
+}
+
+export interface Hero {
+  _type: "hero";
+  title?: string;
+  mainImage?: ImageAsset;
+  paragraph?: string;
+  linkA?: string;
+  linkB?: string;
 }
