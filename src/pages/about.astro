@@ -4,8 +4,10 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/ui/container.astro";
 import Aboutsection from "@components/aboutsection.astro";
 import Accommodationsection from "@components/accommodationsection.astro";
-import { Picture } from "@astrojs/image/components";
 import Teamsection from "@components/ui/teamsection.astro";
+import { getAbout } from "@utils/sanity";
+
+const about = await getAbout();
 ---
 
 <Layout title="About Medastra">
@@ -24,92 +26,25 @@ import Teamsection from "@components/ui/teamsection.astro";
                 Supervised and Structured Practice Sessions
               </h2>
               <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >You will be grouped with candidates with an exam date close
-                    to yours, and you will get the chance to formally PRACTISE
-                    OVER 150 scenarios under timed exam conditions.
-                  </span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span>
-                    You get to practice all the COMMON, IIMPORTANT, DIFFICULT,
-                    and ANTICIPATED scenarios.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >You will get to practice with several different people and
-                    will be able to learn from their strengths and weaknesses.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >You will also get feedback from different people in your
-                    group and trainers.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Boost your knowledge, experience, consultation skills and
-                    confidence.</span
-                  >
-                </li>
+                {
+                  about.sessions?.map((point) => (
+                    <li class="flex items-center space-x-3">
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>{point.sectionBPoint}</span>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </div>
@@ -127,154 +62,25 @@ import Teamsection from "@components/ui/teamsection.astro";
 
             <div class="">
               <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Behind MEDASTRA is a team of senior NHS doctors that want
-                    YOU to benefit from decades of VAST EXPERIENCE.
-                  </span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >All trainers are currently practicing at a senior level in
-                    the UK and UP-TO-DATE with the latest guidelines and
-                    practical aspects of working in the NHS with the skills and
-                    experience to properly prepare you for your exam and future
-                    career.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >The team behind MEDASTRA have a broad range of interests
-                    and cover several fields of medicine, giving you a broad
-                    range of EXPERTISE.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >PASSIONATE TEACHERS with a desire to help and guide other
-                    international medical graduates achieve the level of SUCCESS
-                    that they have achieved and become successful Doctors in the
-                    UK like them.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Trainers that value their INTEGRITY and ETHICAL PRACTICE,
-                    acting on GMC's Guide to Good Medical Practice. Allowing
-                    them to Enjoy great respect both professionally and
-                    personally and strongly encourage and advise doctors coming
-                    to the UK to uphold these ethical values.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Our PLAB 2 courses that SUIT YOUR NEEDS, CV writing and
-                    interview preparation, clinical skills assessment and NHS
-                    orientation.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >We also include an understanding about LIFE IN THE UK
-                    session, so that you can begin your career as a doctor in
-                    the UK with CONFIDENCE and EASE.</span
-                  >
-                </li>
-                <li class="flex items-center space-x-3">
-                  <!-- Icon -->
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path></svg
-                  >
-                  <span
-                    >Trainers that will make learning and preparing for the PLAB
-                    2 exam an ENJOYABLE EXPERIENCE, so that you feel confident
-                    and stress free taking the exam.</span
-                  >
-                </li>
+                {
+                  about.faculty?.map((point) => (
+                    <li class="flex items-center space-x-3">
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>{point.sectionCPoint}</span>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </div>
@@ -290,141 +96,28 @@ import Teamsection from "@components/ui/teamsection.astro";
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-          <div class="">
-            <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span
-                  >Excellent accommodation in the heart of Manchester close to
-                  the course and GMC.</span
-                >
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span
-                  >Comprehensive PLAB 2 preparation through our carefully
-                  tailored courses.</span
-                >
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span
-                  >Additional opportunity to practice through our structured and
-                  supervised practice sessions.</span
-                >
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span>CV writing and interview preparation courses.</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span>Clinical skills assessment course.</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span>NHS orientation and life in the UK sessions.</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span
-                  >Help with arranging your clinical attachments and first job.</span
-                >
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-medbg dark:text-medbglight"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path></svg
-                >
-                <span
-                  >Help with your visa and immigration matters through our legal
-                  contacts.</span
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="">
+          <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+            {
+              about.offering?.map((point) => (
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-medbglight"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>{point.sectionDPoint}</span>
+                </li>
+              ))
+            }
+          </ul>
         </div>
         <hr class="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700" />
 

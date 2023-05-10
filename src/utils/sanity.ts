@@ -57,6 +57,10 @@ export async function getHero(): Promise<Hero> {
   return await client.fetch(groq`*[_type == "hero"][0]`);
 }
 
+export async function getAbout(): Promise<About> {
+  return await client.fetch(groq`*[_type == "about"][0]`);
+}
+
 export interface Post {
   _type: "post";
   _createdAt: string;
@@ -88,4 +92,15 @@ export interface Hero {
   paragraph?: string;
   linkA?: string;
   linkB?: string;
+}
+
+export interface About {
+  _type: "about";
+  who?: string;
+  points?: Array<string>;
+  linkA?: string;
+  linkB?: string;
+  sessions?: Array<string>;
+  faculty?: Array<string>;
+  offering?: Array<string>;
 }
