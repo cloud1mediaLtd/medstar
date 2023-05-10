@@ -56,14 +56,14 @@ const post = await getPost(slug?.toString()!);
         >
         </span>
         <h1
-          class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-medbg"
+          class="text-4xl lg:text-5xl prose font-bold lg:tracking-tight mt-1 lg:leading-tight text-medbg dark:text-white"
         >
           {post.title}
         </h1>
       </div>
 
       <div
-        class="mx-auto prose prose-lg dark:prose-invert mt-6 text-gray-500 dark:text-gray-400 pb-12"
+        class="mx-auto prose prose-xl max-w-4xl dark:prose-invert mt-6 text-gray-500 dark:text-gray-400 pb-12"
       >
         <PortableText value={post.body} />
       </div>

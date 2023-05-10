@@ -1,6 +1,6 @@
 import Review from "./review";
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -96,8 +96,12 @@ export default () => {
     <>
       <Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         grabCursor={true}
         slidesPerView={1}
         loop={true}
